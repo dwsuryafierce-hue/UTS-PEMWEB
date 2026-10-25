@@ -78,7 +78,7 @@ ul { list-style: none; }
 /* ===== Hero ===== */
 /* ===== Hero ===== */
 .hero {
-  background: linear-gradient(rgba(31, 122, 63, 0.9), rgba(31, 122, 63, 0.9)), url('../image/bgpanduan.jpg');
+  background:url('../image/bgpanduan.jpg');
   background-size: cover;
   background-position: center;
   color: var(--bg);
