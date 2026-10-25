@@ -35,8 +35,8 @@ ul { list-style: none; }
 
 /* ===== Header & navigasi (Flexbox) ===== */
 .site-header .logo img {
-  height: 10px;
-  width: 10;
+  height: 48px;
+  width: auto;
   display: block;
 }
 .header-inner {
