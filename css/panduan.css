@@ -35,7 +35,7 @@ ul { list-style: none; }
 
 /* ===== Header & navigasi (Flexbox) ===== */
 .site-header .logo img {
-  height: 64px;
+  height: 70px;
   width: auto;
   display: block;
 }
