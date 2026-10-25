@@ -76,8 +76,11 @@ ul { list-style: none; }
 .nav-list a.active { background: var(--hijau); color: var(--bg); }
 
 /* ===== Hero ===== */
+/* ===== Hero ===== */
 .hero {
-  background: var(--hijau);
+  background: linear-gradient(rgba(31, 122, 63, 0.9), rgba(31, 122, 63, 0.9)), url('../image/nama_gambar.jpg');
+  background-size: cover;
+  background-position: center;
   color: var(--bg);
   padding: 40px 0 56px;
 }
