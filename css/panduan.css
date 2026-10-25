@@ -14,7 +14,6 @@
 
 /* ===== Reset dasar ===== */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
 body {
   font-family: 'Poppins', Arial, sans-serif;
   background-color: var(--bg);
