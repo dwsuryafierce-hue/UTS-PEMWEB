@@ -98,7 +98,7 @@ ul { list-style: none; }
   font-size: clamp(2rem, 5vw, 3.4rem);
   line-height: 1.15;
   font-weight: 700;
-  color: #fff;
+  color: ##008000;
 }
 .hero p {
   margin-top: 10px;
