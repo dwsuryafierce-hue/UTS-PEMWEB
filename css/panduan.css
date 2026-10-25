@@ -34,12 +34,11 @@ ul { list-style: none; }
 }
 
 /* ===== Header & navigasi (Flexbox) ===== */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: var(--bg);
-  border-bottom: 2px solid var(--kuning);
+.site-header .logo img {
+  height: 40px; /* Sesuaikan tinggi logo, misal 40px atau 50px */
+  width: auto;
+  display: block;
+}
 }
 .header-inner {
   display: flex;
