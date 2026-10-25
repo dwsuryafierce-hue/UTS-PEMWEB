@@ -35,10 +35,9 @@ ul { list-style: none; }
 
 /* ===== Header & navigasi (Flexbox) ===== */
 .site-header .logo img {
-  height: 40px; /* Sesuaikan tinggi logo, misal 40px atau 50px */
+  height: 40px;
   width: auto;
   display: block;
-}
 }
 .header-inner {
   display: flex;
