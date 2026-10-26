@@ -6,6 +6,8 @@
   --hijau: #1f7a3f;
   --hijau-tua: #17622f;
   --hijau-muda: #e8f5ec;
+  --hijau-pucat: #e6f6ea;
+  --putih: #ffffff;
   --kuning: #f5c518;
   --gelap: #1b2a20;
   --teks: #1f2d24;
@@ -33,54 +35,70 @@ ul { list-style: none; }
   padding: 0 24px;
 }
 
-/* ===== Header & navigasi (Flexbox) ===== */
-.site-header {
+/* ===== Navbar (sama dengan halaman Artikel) ===== */
+.wrap {
+  max-width: 1000px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.navbar {
   position: sticky;
   top: 0;
-  z-index: 10;
-  background: var(--bg);
-  border-bottom: 2px solid var(--kuning);
+  z-index: 50;
+  background: var(--putih);
+  border-bottom: 3px solid var(--hijau);
+  box-shadow: 0 2px 8px rgba(31, 122, 61, 0.08);
 }
-.header-inner {
+
+.navbar .wrap {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  justify-content: space-between;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
-.logo {
-  font-weight: 700;
-  font-size: 1.4rem;
-  color: var(--hijau);
-}
+
 .logo img {
-  height: 56px;
+  height: 44px;
   width: auto;
   display: block;
 }
-.badge-sdg {
-  background: var(--hijau);
-  color: var(--bg);
-  font-size: .8rem;
-  padding: 2px 8px;
-  border-radius: 6px;
-  margin-left: 4px;
-}
-.nav-list {
+
+.nav-menu {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  gap: 4px;
+  list-style: none;
 }
-.nav-list a {
+
+.nav-menu a {
+  position: relative;
   display: block;
-  padding: 8px 18px;
-  border-radius: 999px;
-  font-weight: 600;
+  padding: 8px 16px;
+  color: var(--teks);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 99px;
+  transition: background .25s, color .25s;
 }
-.nav-list a:hover { background: var(--garis); }
-.nav-list a.active { background: var(--hijau); color: var(--bg); }
+
+.nav-menu a:hover {
+  background: var(--hijau-pucat);
+  color: var(--hijau);
+}
+
+.nav-menu a.active {
+  background: var(--hijau);
+  color: #fff;
+}
+
+#menu-toggle, .burger {
+  display: none;
+}
 
 /* ===== Hero ===== */
 .hero {
@@ -167,7 +185,7 @@ input {
 input::placeholder { color: #8a9a90; }
 input:focus-visible,
 .btn:focus-visible,
-.nav-list a:focus-visible {
+.nav-menu a:focus-visible {
   outline: 3px solid var(--hijau);
   outline-offset: 2px;
 }
@@ -265,14 +283,19 @@ td {
   background: #fff;
 }
 
-/* ===== Footer ===== */
-.site-footer {
-  background: var(--hijau);
-  color: #fff;
+/* ===== Footer (sama dengan halaman Artikel) ===== */
+footer {
+  background: #145528;
+  color: #e8f7ec;
   text-align: center;
-  padding: 36px 16px;
+  padding: 22px;
+  font-size: 13px;
+  margin-top: 40px;
 }
-.site-footer strong { color: var(--kuning); }
+
+footer b {
+  color: var(--kuning);
+}
 
 /* ===== Media queries (responsif) ===== */
 
@@ -281,12 +304,36 @@ td {
   .grid-2 { grid-template-columns: 1fr; }
 }
 
-/* Smartphone (<= 600px): navigasi & ukuran font dikecilkan */
+/* Navbar HP & tablet (<= 768px): menu jadi burger */
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+    color: var(--hijau);
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--putih);
+    flex-direction: column;
+    padding: 10px 20px;
+    border-bottom: 3px solid var(--hijau);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  #menu-toggle:checked ~ .nav-menu {
+    display: flex;
+  }
+}
+
+/* Smartphone (<= 600px): ukuran font dan jarak dikecilkan */
 @media (max-width: 600px) {
   .container { padding: 0 16px; }
-  .header-inner { justify-content: center; }
-  .nav-list { justify-content: center; }
-  .nav-list a { padding: 6px 12px; font-size: .9rem; }
   .card { padding: 20px; }
   .card h2 { font-size: 1.4rem; }
 }
