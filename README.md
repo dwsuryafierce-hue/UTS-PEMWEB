@@ -7,7 +7,7 @@ Website Edukasi Hidup Sehat dan Kesejahteraan (Mendukung SDG 3: Kehidupan Sehat 
 1. **Anak Agung Ratih Hardi Maheswari** — NIM: 2515091021  
    *Tugas:*
 2. **I Komang Yusa Katmandu** — NIM: 2515091096  
-   *Tugas:Membuat halaman artikel pada project ini*
+   *Tugas: Membuat halaman artikel pada project ini*
 3. **Komang Alvin Diksajaya** — NIM: 2515091045  
    *Tugas:* 
 4. **I Dewa Gede Surya Palguna** — NIM: 2515091148  
