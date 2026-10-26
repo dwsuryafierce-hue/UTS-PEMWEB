@@ -33,12 +33,15 @@ ul { list-style: none; }
 }
 
 /* ===== Header & navigasi (Flexbox) ===== */
-.site-header .logo img {
-  height: 60px; /* Sesuaikan tingginya, bisa diubah jadi 65px atau 70px jika ingin lebih besar */
-  width: auto;
-  display: block;
-  max-height: 100%;
+/* ---------- NAVBAR (Disamakan dengan Panduan) ---------- */
+.site-header {
+  background: var(--putih);
+  border-bottom: 3px solid var(--kuning);
+  position: sticky;
+  top: 0;
+  z-index: 50;
 }
+
 .header-inner {
   display: flex;
   justify-content: space-between;
@@ -48,33 +51,72 @@ ul { list-style: none; }
   padding-top: 14px;
   padding-bottom: 14px;
 }
+
+.site-header .logo img {
+  height: 60px;
+  width: auto;
+  display: block;
+  max-height: 100%;
+}
+
 .logo {
   font-weight: 700;
   font-size: 1.4rem;
   color: var(--hijau);
+  text-decoration: none;
 }
-.badge-sdg {
-  background: var(--hijau);
-  color: var(--bg);
-  font-size: .8rem;
-  padding: 2px 8px;
-  border-radius: 6px;
-  margin-left: 4px;
-}
+
 .nav-list {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
+
 .nav-list a {
   display: block;
   padding: 8px 18px;
   border-radius: 999px;
   font-weight: 600;
+  font-size: 14px;
+  color: var(--teks);
+  text-decoration: none;
+  transition: background .25s, color .25s;
 }
-.nav-list a:hover { background: var(--garis); }
-.nav-list a.active { background: var(--hijau); color: var(--bg); }
 
+.nav-list a:hover {
+  background: var(--hijau-pucat);
+  color: var(--hijau);
+}
+
+.nav-list a.active {
+  background: var(--hijau);
+  color: #fff;
+}
+
+/* Responsif HP untuk Navbar */
+@media(max-width: 760px) {
+  .burger {
+    display: block !important;
+  }
+  .nav-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--putih);
+    flex-direction: column;
+    padding: 10px 20px;
+    border-bottom: 3px solid var(--kuning);
+  }
+  #menu-toggle:checked ~ nav .nav-list,
+  #menu-toggle:checked ~ .nav-list {
+    display: flex;
+  }
+}
 /* ===== Hero ===== */
 /* ===== Hero ===== */
 .hero {
