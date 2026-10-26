@@ -1,130 +1,134 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Panduan | Livora - live well, be you.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/panduan.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panduan | Livora - live well, be you.</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/panduan.css">
 </head>
 <body>
 
-  <!-- Navbar / Header (Disamakan dengan Beranda) -->
-  <nav class="navbar">
-    <div class="wrap">
-      <a class="logo" href="index.html">
-        <img src="image/logo.livora.png" alt="Logo Livora">
-      </a>
-      <input type="checkbox" id="menu-toggle">
-      <label for="menu-toggle" class="burger">☰</label>
-      <ul class="nav-menu">
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="edukasi.html">Edukasi</a></li>
-        <li><a href="panduan.html" class="active" aria-current="page">Panduan</a></li>
-        <li><a href="artikel.html">Artikel</a></li>
-        <li><a href="tentang.html">Tentang</a></li>
-      </ul>
+<!-- ===== NAVBAR (sama dengan Beranda) ===== -->
+<nav class="navbar"><div class="wrap">
+  <a class="logo" href="index.html">
+    <img src="image/logo.livora.png" alt="Logo Livora">
+  </a>
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="burger">☰</label>
+  <ul class="nav-menu">
+    <li><a href="index.html">Beranda</a></li>
+    <li><a href="edukasi.html">Edukasi</a></li>
+    <li><a href="panduan.html" class="active">Panduan</a></li>
+    <li><a href="artikel.html">Artikel</a></li>
+    <li><a href="tentang.html">Tentang</a></li>
+  </ul>
+</div></nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero"><div class="container">
+  <span class="tag">Panduan Hidup Sehat</span>
+  <h1>Langkah nyata untuk hidup sehat</h1>
+  <p>Hitung BMI-mu, atur isi piringmu, dan mulai kebiasaan kecil yang berdampak besar.</p>
+</div></header>
+
+<!-- ===== ISI ===== -->
+<main class="container grid-2">
+
+  <!-- Kalkulator BMI -->
+  <section class="card">
+    <h2>Kalkulator BMI</h2>
+    <label for="berat">Berat badan (kg)</label>
+    <input type="number" id="berat" placeholder="Contoh: 55" min="1">
+    <label for="tinggi">Tinggi badan (cm)</label>
+    <input type="number" id="tinggi" placeholder="Contoh: 165" min="1">
+    <button class="btn" type="button" onclick="hitungBMI()">Hitung BMI</button>
+    <p class="hasil" id="hasil" aria-live="polite"></p>
+    <p class="sumber">Kategori mengacu pada Kemenkes RI. BMI hanya perkiraan awal, bukan diagnosis.</p>
+  </section>
+
+  <!-- Isi Piringku -->
+  <section class="card">
+    <h2>Isi Piringku</h2>
+    <div class="piring">
+      <img src="image/isi.piringku.png" alt="Ilustrasi Isi Piringku">
     </div>
-  </nav>
+    <ul class="centang">
+      <li>½ piring: sayur dan buah</li>
+      <li>½ piring: makanan pokok dan lauk-pauk</li>
+      <li>Sayur lebih banyak dari buah, makanan pokok lebih banyak dari lauk</li>
+      <li>Minum air putih, batasi gula, garam, dan lemak</li>
+    </ul>
+    <p class="sumber">Sumber: Pedoman Isi Piringku, Kemenkes RI.</p>
+  </section>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container">
-        <span class="tag">Panduan &amp; Tips</span>
-        <h1>Praktik Hidup Sehat Setiap Hari</h1>
-        <p>Hitung BMI, atur piringmu, dan susun jadwal bergerak.</p>
-      </div>
-    </section>
+  <!-- Aktivitas Fisik -->
+  <section class="card">
+    <div class="ikon-box">🏃</div>
+    <h2>Aktivitas Fisik</h2>
+    <ul class="centang">
+      <li>Minimal 150 menit per minggu (intensitas sedang)</li>
+      <li>Jalan kaki, bersepeda, atau olahraga ringan</li>
+      <li>Jangan duduk terlalu lama, bergeraklah tiap 1 jam</li>
+    </ul>
+    <p class="sumber">Sumber: World Health Organization (WHO).</p>
+  </section>
 
-    <!-- Konten panduan -->
-    <section class="container grid-2">
+  <!-- Tidur & Air -->
+  <section class="card">
+    <div class="ikon-box ikon-kuning">😴</div>
+    <h2>Tidur &amp; Cairan</h2>
+    <ul class="centang">
+      <li>Tidur 7–9 jam per hari untuk orang dewasa</li>
+      <li>Minum sekitar 8 gelas air putih per hari</li>
+      <li>Kurangi layar sebelum tidur</li>
+    </ul>
+    <p class="sumber">Sumber: Kemenkes RI &amp; WHO.</p>
+  </section>
 
-      <!-- Kalkulator BMI -->
-      <article class="card">
-        <h2>Kalkulator BMI</h2>
-        <label for="berat">Berat badan (kg)</label>
-        <input type="number" id="berat" min="1" placeholder="contoh: 55">
+  <!-- Tabel BMI -->
+  <section class="card" style="grid-column: 1 / -1;">
+    <h2>Kategori BMI</h2>
+    <div class="tabel-wrap">
+      <table>
+        <thead>
+          <tr><th>Kategori</th><th>Rentang BMI</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Kurus</td><td>&lt; 18,5</td></tr>
+          <tr><td>Normal</td><td>18,5 – 25,0</td></tr>
+          <tr><td>Gemuk (berat badan lebih)</td><td>25,1 – 27,0</td></tr>
+          <tr><td>Obesitas</td><td>&gt; 27,0</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-        <label for="tinggi">Tinggi badan (cm)</label>
-        <input type="number" id="tinggi" min="1" placeholder="contoh: 165">
+</main>
 
-        <button type="button" id="btn-hitung" class="btn">Hitung</button>
-        <p id="hasil-bmi" class="hasil" aria-live="polite"></p>
-        <p class="sumber">Kategori BMI mengacu pada klasifikasi Asia-Pasifik (Kemenkes RI).</p>
-      </article>
+<footer class="site-footer">© 2026 <strong>Livora | SDG 3 | Alvin-Ratih-Yusa-Surya</strong> · Dibuat untuk edukasi hidup sehat</footer>
 
-      <!-- Isi Piringku -->
-      <article class="card">
-        <h2>Isi Piringku</h2>
-        <div class="piring">
-          <img src="image/isipiring.jpg" alt="Ilustrasi Isi Piringku">
-        </div>
-        <p class="keterangan">50% buah &amp; sayur, 50% karbohidrat &amp; lauk pauk. Tambahkan air putih.</p>
-        <p class="sumber">Panduan Isi Piringku, Kemenkes RI.</p>
-      </article>
+<script>
+function hitungBMI() {
+  var berat = parseFloat(document.getElementById('berat').value);
+  var tinggi = parseFloat(document.getElementById('tinggi').value);
+  var hasil = document.getElementById('hasil');
 
-      <!-- Aktivitas Fisik -->
-      <article class="card">
-        <div class="ikon-box ikon-kuning" aria-hidden="true">🚴</div>
-        <h2>Aktivitas Fisik</h2>
-        <ul class="centang">
-          <li>Minimal 150 menit/minggu kardio intensitas sedang</li>
-          <li>Peregangan leher dan bahu tiap 45 menit duduk</li>
-          <li>Jalan kaki 5 menit di sela kuliah atau coding</li>
-        </ul>
-        <p class="sumber">WHO Guidelines on Physical Activity and Sedentary Behaviour.</p>
-      </article>
+  if (!berat || !tinggi || berat <= 0 || tinggi <= 0) {
+    hasil.textContent = 'Isi berat dan tinggi badan dulu ya.';
+    return;
+  }
 
-      <!-- Jadwal Mingguan -->
-      <article class="card">
-        <div class="ikon-box" aria-hidden="true">📅</div>
-        <h2>Contoh Jadwal Mingguan</h2>
-        <div class="tabel-wrap">
-          <table>
-            <thead>
-              <tr><th>Hari</th><th>Menu</th><th>Aktivitas</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Senin</td><td>Nasi, ikan, tumis sayur, pisang</td><td>Jalan cepat 30&prime;</td></tr>
-              <tr><td>Rabu</td><td>Tempe, sayur sop, jeruk</td><td>Jogging 30&prime;</td></tr>
-              <tr><td>Jumat</td><td>Ayam panggang, salad, apel</td><td>Bersepeda 40&prime;</td></tr>
-              <tr><td>Minggu</td><td>Telur, gado-gado, semangka</td><td>Olahraga santai bareng teman</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </article>
+  var bmi = berat / Math.pow(tinggi / 100, 2);
+  var kategori;
+  if (bmi < 18.5) kategori = 'Kurus';
+  else if (bmi <= 25) kategori = 'Normal';
+  else if (bmi <= 27) kategori = 'Gemuk (berat badan lebih)';
+  else kategori = 'Obesitas';
 
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>&copy; 2026 <strong>Sehat Sejahtera SDG 3</strong> &middot; Dibuat untuk edukasi hidup sehat</p>
-  </footer>
-
-  <script>
-    // Kalkulator BMI: BMI = berat (kg) / (tinggi dalam meter)^2
-    document.getElementById('btn-hitung').addEventListener('click', function () {
-      var berat = parseFloat(document.getElementById('berat').value);
-      var tinggi = parseFloat(document.getElementById('tinggi').value) / 100;
-      var hasil = document.getElementById('hasil-bmi');
-
-      if (!berat || !tinggi || berat <= 0 || tinggi <= 0) {
-        hasil.textContent = 'Isi berat dan tinggi badan dulu ya.';
-        return;
-      }
-
-      var bmi = berat / (tinggi * tinggi);
-      var kategori;
-      if (bmi < 18.5) kategori = 'Kurus';
-      else if (bmi < 23) kategori = 'Normal';
-      else if (bmi < 25) kategori = 'Berat badan lebih';
-      else kategori = 'Obesitas';
-
-      hasil.textContent = 'BMI kamu ' + bmi.toFixed(1) + ' (' + kategori + ')';
-    });
-  </script>
+  hasil.textContent = 'BMI kamu ' + bmi.toFixed(1).replace('.', ',') + ' (' + kategori + ')';
+}
+</script>
 </body>
 </html>
