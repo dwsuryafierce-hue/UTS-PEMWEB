@@ -1,81 +1,338 @@
-/* ===== tentang.css (CSS halaman Tentang) ===== */
+/* =========================================
+   tentang.css - Halaman Tentang
+   ========================================= */
 
-/* ---------- WARNA & DASAR ---------- */
-:root{
-  --hijau:#1f7a3d; --hijau-muda:#2e9e57; --hijau-pucat:#e6f6ea;
-  --kuning:#f6c928; --kuning-pucat:#fff6cf;
-  --putih:#ffffff; --teks:#1d2b22; --abu:#5a6b60;
+
+/* ---------- Warna & dasar ---------- */
+:root {
+  --hijau: #1f7a3d;
+  --hijau-muda: #2e9e57;
+  --hijau-pucat: #e6f6ea;
+
+  --kuning: #f6c928;
+  --kuning-pucat: #fff6cf;
+
+  --putih: #ffffff;
+  --teks: #1d2b22;
+  --abu: #5a6b60;
 }
-*{box-sizing:border-box}
-body{margin:0;font-family:'Poppins',system-ui,sans-serif;color:var(--teks);background:#fbfdf8;line-height:1.65}
-.wrap{max-width:1040px;margin:auto;padding:0 20px}
-h1,h2{color:var(--hijau)}
-p{color:var(--abu)}
-img{max-width:100%;height:auto}  /* pengaman: gambar tidak boleh lebih lebar dari kotaknya */
 
-/* ---------- NAVBAR ---------- */
-.navbar{position:sticky;top:0;z-index:50;background:var(--putih);border-bottom:3px solid var(--kuning)}
-.navbar .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px}
-.logo{display:block;text-decoration:none}
-.logo img{height:44px;width:auto;display:block}
-.nav-menu{display:flex;gap:4px;list-style:none;margin:0;padding:0}
-.nav-menu a{position:relative;display:block;padding:8px 16px;color:var(--teks);text-decoration:none;font-size:14px;font-weight:500;border-radius:99px;transition:background .25s,color .25s}
-.nav-menu a::after{content:"";position:absolute;left:16px;right:16px;bottom:3px;height:3px;border-radius:3px;background:var(--kuning);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
-.nav-menu a:hover::after{transform:scaleX(1)}
-.nav-menu a:hover{background:var(--hijau-pucat);color:var(--hijau)}
-.nav-menu a.active{background:var(--hijau);color:#fff}
-.nav-menu a.active::after{display:none}
-#menu-toggle{display:none}
-.burger{display:none;font-size:26px;cursor:pointer;color:var(--hijau)}
+* {
+  box-sizing: border-box;
+}
 
-/* ---------- BANNER ---------- */
-.banner{
+body {
+  margin: 0;
+  font-family: 'Poppins', system-ui, sans-serif;
+  color: var(--teks);
+  background: #fbfdf8;
+  line-height: 1.65;
+}
+
+.wrap {
+  max-width: 1040px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+h1,
+h2 {
+  color: var(--hijau);
+}
+
+p {
+  color: var(--abu);
+}
+
+/* biar gambar nggak pernah lebih lebar dari kotaknya */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* ---------- Navbar ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--putih);
+  border-bottom: 3px solid var(--kuning);
+}
+
+.navbar .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.logo {
+  display: block;
+  text-decoration: none;
+}
+
+.logo img {
+  display: block;
+  height: 44px;
+  width: auto;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu a {
+  position: relative;
+  display: block;
+  padding: 8px 16px;
+  color: var(--teks);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 99px;
+  transition: background 0.25s, color 0.25s;
+}
+
+/* garis kuning kecil di bawah menu saat di-hover */
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 3px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--kuning);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-menu a:hover {
+  background: var(--hijau-pucat);
+  color: var(--hijau);
+}
+
+.nav-menu a:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-menu a.active {
+  background: var(--hijau);
+  color: #fff;
+}
+
+.nav-menu a.active::after {
+  display: none;
+}
+
+/* tombol burger (muncul di HP saja) */
+#menu-toggle {
+  display: none;
+}
+
+.burger {
+  display: none;
+  font-size: 26px;
+  color: var(--hijau);
+  cursor: pointer;
+}
+
+
+/* ---------- Banner ---------- */
+.banner {
+  padding: 48px 0;
   background:
-    linear-gradient(rgba(20,90,45,.72), rgba(20,90,45,.72)),
-    url("../image/tentang/bg.tentang.png") center/cover no-repeat;
-  padding:48px 0;
+    linear-gradient(rgba(20, 90, 45, 0.72), rgba(20, 90, 45, 0.72)),
+    url("../image/tentang/bg.tentang.png") center / cover no-repeat;
 }
-.banner h1{color:#fff;margin:10px 0 6px;font-size:clamp(28px,5vw,40px);line-height:1.2}
-.banner p{color:#e8f7ec;margin:0}
-.tag{display:inline-block;background:var(--kuning);color:#3a2f00;font-weight:600;font-size:12px;padding:4px 12px;border-radius:99px}
 
-/* ---------- KOTAK ISI ---------- */
-.dua-kolom{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;padding-top:36px}
-.kotak{background:var(--putih);border:1px solid #dcebdc;border-radius:18px;padding:24px;box-shadow:0 2px 10px rgba(31,122,61,.06);min-width:0}
-.kotak.penuh{margin-top:20px}
-.kotak h2{margin:0 0 10px}
-.kotak h3{margin:0 0 6px;color:var(--teks);font-size:17px}
+.banner h1 {
+  margin: 10px 0 6px;
+  color: #fff;
+  font-size: clamp(28px, 5vw, 40px);
+  line-height: 1.2;
+}
 
-/* kotak ikon (emoji) */
-.ikon{height:90px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:46px;margin-bottom:16px;background:var(--hijau-pucat)}
-.ikon.kuning{background:var(--kuning-pucat)}
+.banner p {
+  margin: 0;
+  color: #e8f7ec;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--kuning);
+  color: #3a2f00;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 99px;
+}
+
+
+/* ---------- Kotak isi ---------- */
+.dua-kolom {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding-top: 36px;
+}
+
+.kotak {
+  min-width: 0;
+  padding: 24px;
+  background: var(--putih);
+  border: 1px solid #dcebdc;
+  border-radius: 18px;
+  box-shadow: 0 2px 10px rgba(31, 122, 61, 0.06);
+}
+
+.kotak.penuh {
+  margin-top: 20px;
+}
+
+.kotak h2 {
+  margin: 0 0 10px;
+}
+
+.kotak h3 {
+  margin: 0 0 6px;
+  color: var(--teks);
+  font-size: 17px;
+}
+
+
+/* ---------- Kotak ikon (emoji) ---------- */
+.ikon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  margin-bottom: 16px;
+  font-size: 46px;
+  background: var(--hijau-pucat);
+  border-radius: 14px;
+}
+
+.ikon.kuning {
+  background: var(--kuning-pucat);
+}
 
 /* kotak foto (foto kelompok) */
-.ikon.foto{height:auto;padding:0;overflow:hidden;background:none}
-.ikon.foto img{width:100%;height:auto;display:block;border-radius:14px}
+.ikon.foto {
+  height: auto;
+  padding: 0;
+  overflow: hidden;
+  background: none;
+}
 
-/* daftar anggota */
-.anggota{margin:0;padding-left:22px;color:var(--teks);font-weight:500}
-.anggota li{padding:8px 0;border-bottom:1px dashed #dcebdc}
-.anggota li:last-child{border-bottom:0}
-.anggota span{display:block;font-size:13px;font-weight:600;color:var(--hijau)}
+.ikon.foto img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
 
-/* catatan permohonan maaf */
-.catatan{background:var(--kuning-pucat);border-left:4px solid var(--kuning);border-radius:10px;padding:12px 14px;color:var(--teks)}
 
-/* daftar referensi */
-.referensi{margin:0;padding-left:22px;color:var(--abu)}
-.referensi li{padding:4px 0}
-.referensi a{color:var(--hijau);font-weight:500;text-decoration:none;word-break:break-word}
-.referensi a:hover{text-decoration:underline;color:var(--hijau-muda)}
+/* ---------- Daftar anggota ---------- */
+.anggota {
+  margin: 0;
+  padding-left: 22px;
+  color: var(--teks);
+  font-weight: 500;
+}
 
-/* ---------- FOOTER ---------- */
-footer{background:var(--hijau);color:#e8f7ec;text-align:center;padding:22px;font-size:13px;margin-top:40px}
-footer b{color:var(--kuning)}
+.anggota li {
+  padding: 8px 0;
+  border-bottom: 1px dashed #dcebdc;
+}
 
-/* ---------- TAMPILAN HP (layar 760px ke bawah) ---------- */
-@media(max-width:760px){
-  .burger{display:block}
-  .nav-menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--putih);flex-direction:column;padding:10px 20px;border-bottom:3px solid var(--kuning)}
-  #menu-toggle:checked ~ .nav-menu{display:flex}
+.anggota li:last-child {
+  border-bottom: 0;
+}
+
+.anggota span {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--hijau);
+}
+
+
+/* ---------- Catatan permohonan maaf ---------- */
+.catatan {
+  padding: 12px 14px;
+  background: var(--kuning-pucat);
+  color: var(--teks);
+  border-left: 4px solid var(--kuning);
+  border-radius: 10px;
+}
+
+
+/* ---------- Daftar referensi ---------- */
+.referensi {
+  margin: 0;
+  padding-left: 22px;
+  color: var(--abu);
+}
+
+.referensi li {
+  padding: 4px 0;
+}
+
+.referensi a {
+  color: var(--hijau);
+  font-weight: 500;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.referensi a:hover {
+  color: var(--hijau-muda);
+  text-decoration: underline;
+}
+
+
+/* ---------- Footer ---------- */
+footer {
+  margin-top: 40px;
+  padding: 22px;
+  background: var(--hijau);
+  color: #e8f7ec;
+  font-size: 13px;
+  text-align: center;
+}
+
+footer b {
+  color: var(--kuning);
+}
+
+
+/* ---------- Tampilan HP (760px ke bawah) ---------- */
+@media (max-width: 760px) {
+  .burger {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    padding: 10px 20px;
+    background: var(--putih);
+    border-bottom: 3px solid var(--kuning);
+  }
+
+  #menu-toggle:checked ~ .nav-menu {
+    display: flex;
+  }
 }
