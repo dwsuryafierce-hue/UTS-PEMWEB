@@ -54,6 +54,7 @@ body {
 }
 
 .nav-menu a {
+  position: relative;
   display: block;
   padding: 8px 16px;
   color: var(--teks);
@@ -61,12 +62,39 @@ body {
   font-size: 14px;
   font-weight: 500;
   border-radius: 99px;
-  transition: .2s;
+  transition: background .25s, color .25s;
 }
 
-.nav-menu a:hover, .nav-menu a.active {
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 3px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--kuning);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s ease;
+}
+
+.nav-menu a:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-menu a:hover {
+  background: var(--hijau-pucat);
+  color: var(--hijau);
+}
+
+.nav-menu a.active {
   background: var(--hijau);
   color: #fff;
+}
+
+.nav-menu a.active::after {
+  display: none;
 }
 
 #menu-toggle, .burger { display: none; }
