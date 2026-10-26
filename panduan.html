@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Panduan</title>
+  <title>Panduan | Livora - live well, be you.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -11,25 +11,23 @@
 </head>
 <body>
 
-  <!-- Header + navigasi -->
-  <header class="site-header">
-  <div class="container header-inner">
-    <a href="index.html" class="logo"><img src="image/logo.livora.png" alt="Logo Livora"></a>
-    
-    <input type="checkbox" id="menu-toggle" style="display:none;">
-    <label for="menu-toggle" class="burger" style="display:none; cursor:pointer; font-size:26px;">☰</label>
-
-    <nav aria-label="Navigasi utama">
-      <ul class="nav-list">
-        <li><a href="index.html" class="active" aria-current="page">Beranda</a></li>
+  <!-- Navbar / Header (Disamakan dengan Beranda) -->
+  <nav class="navbar">
+    <div class="wrap">
+      <a class="logo" href="index.html">
+        <img src="image/logo.livora.png" alt="Logo Livora">
+      </a>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="burger">☰</label>
+      <ul class="nav-menu">
+        <li><a href="index.html">Beranda</a></li>
         <li><a href="edukasi.html">Edukasi</a></li>
-        <li><a href="panduan.html">Panduan</a></li>
+        <li><a href="panduan.html" class="active" aria-current="page">Panduan</a></li>
         <li><a href="artikel.html">Artikel</a></li>
         <li><a href="tentang.html">Tentang</a></li>
       </ul>
-    </nav>
-  </div>
-</header>
+    </div>
+  </nav>
 
   <main>
     <!-- Hero -->
@@ -46,7 +44,7 @@
 
       <!-- Kalkulator BMI -->
       <article class="card">
-        <h2> Kalkulator BMI</h2>
+        <h2>Kalkulator BMI</h2>
         <label for="berat">Berat badan (kg)</label>
         <input type="number" id="berat" min="1" placeholder="contoh: 55">
 
@@ -59,9 +57,8 @@
       </article>
 
       <!-- Isi Piringku -->
-     <!-- Isi Piringku -->
       <article class="card">
-        <h2> Isi Piringku</h2>
+        <h2>Isi Piringku</h2>
         <div class="piring">
           <img src="image/isipiring.jpg" alt="Ilustrasi Isi Piringku">
         </div>
@@ -71,7 +68,7 @@
 
       <!-- Aktivitas Fisik -->
       <article class="card">
-        <div class="ikon-box ikon-kuning" aria-hidden="true"  <img src="image/pesepeda.jpg" alt="pesepeda"></div>
+        <div class="ikon-box ikon-kuning" aria-hidden="true">🚴</div>
         <h2>Aktivitas Fisik</h2>
         <ul class="centang">
           <li>Minimal 150 menit/minggu kardio intensitas sedang</li>
@@ -83,7 +80,7 @@
 
       <!-- Jadwal Mingguan -->
       <article class="card">
-        <div class="ikon-box" aria-hidden="true"></div>
+        <div class="ikon-box" aria-hidden="true">📅</div>
         <h2>Contoh Jadwal Mingguan</h2>
         <div class="tabel-wrap">
           <table>
@@ -108,26 +105,26 @@
   </footer>
 
   <script>
-// Kalkulator BMI: BMI = berat (kg) / (tinggi dalam meter)^2
-document.getElementById('btn-hitung').addEventListener('click', function () {
-  var berat = parseFloat(document.getElementById('berat').value);
-  var tinggi = parseFloat(document.getElementById('tinggi').value) / 100;
-  var hasil = document.getElementById('hasil-bmi');
+    // Kalkulator BMI: BMI = berat (kg) / (tinggi dalam meter)^2
+    document.getElementById('btn-hitung').addEventListener('click', function () {
+      var berat = parseFloat(document.getElementById('berat').value);
+      var tinggi = parseFloat(document.getElementById('tinggi').value) / 100;
+      var hasil = document.getElementById('hasil-bmi');
 
-  if (!berat || !tinggi || berat <= 0 || tinggi <= 0) {
-    hasil.textContent = 'Isi berat dan tinggi badan dulu ya.';
-    return;
-  }
+      if (!berat || !tinggi || berat <= 0 || tinggi <= 0) {
+        hasil.textContent = 'Isi berat dan tinggi badan dulu ya.';
+        return;
+      }
 
-  var bmi = berat / (tinggi * tinggi);
-  var kategori;
-  if (bmi < 18.5) kategori = 'Kurus';
-  else if (bmi < 23) kategori = 'Normal';
-  else if (bmi < 25) kategori = 'Berat badan lebih';
-  else kategori = 'Obesitas';
+      var bmi = berat / (tinggi * tinggi);
+      var kategori;
+      if (bmi < 18.5) kategori = 'Kurus';
+      else if (bmi < 23) kategori = 'Normal';
+      else if (bmi < 25) kategori = 'Berat badan lebih';
+      else kategori = 'Obesitas';
 
-  hasil.textContent = 'BMI kamu ' + bmi.toFixed(1) + ' (' + kategori + ')';
-});
-</script>
+      hasil.textContent = 'BMI kamu ' + bmi.toFixed(1) + ' (' + kategori + ')';
+    });
+  </script>
 </body>
 </html>
