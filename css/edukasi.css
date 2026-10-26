@@ -9,16 +9,16 @@
   --abu: #5a6b60;
 }
 
-* {
-  box-sizing: border-box;
+* { 
+  box-sizing: border-box; 
 }
 
 body {
   margin: 0;
-  font-family: 'Poppins', system-ui, sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: var(--teks);
   background: #fbfdf8;
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 .wrap {
@@ -27,26 +27,7 @@ body {
   padding: 0 20px;
 }
 
-.tag {
-  display: inline-block;
-  background: var(--kuning);
-  color: #3a2f00;
-  font-weight: 600;
-  font-size: 12px;
-  padding: 4px 12px;
-  border-radius: 99px;
-}
-
-.seksi {
-  padding-top: 36px;
-}
-
-.seksi-catatan {
-  padding-top: 24px;
-  margin-bottom: 50px;
-}
-
-/* ---------- NAVBAR ---------- */
+/* NAVBAR */
 .navbar {
   position: sticky;
   top: 0;
@@ -59,22 +40,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding: 12px 20px;
 }
 
-.logo {
-  font-weight: 700;
-  color: var(--hijau);
-  font-size: 18px;
-  text-decoration: none;
-}
-
-.logo img {
-  height: 44px;
-  width: auto;
-  display: block;
-}
+.logo img { height: 44px; display: block; }
 
 .nav-menu {
   display: flex;
@@ -85,7 +54,6 @@ body {
 }
 
 .nav-menu a {
-  position: relative;
   display: block;
   padding: 8px 16px;
   color: var(--teks);
@@ -93,245 +61,224 @@ body {
   font-size: 14px;
   font-weight: 500;
   border-radius: 99px;
-  transition: background .25s, color .25s;
+  transition: .2s;
 }
 
-.nav-menu a::after {
-  content: "";
-  position: absolute;
-  left: 16px;
-  right: 16px;
-  bottom: 3px;
-  height: 3px;
-  border-radius: 3px;
-  background: var(--kuning);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform .3s ease;
-}
-
-.nav-menu a:hover::after {
-  transform: scaleX(1);
-}
-
-.nav-menu a:hover {
-  background: var(--hijau-pucat);
-  color: var(--hijau);
-}
-
-.nav-menu a.active {
+.nav-menu a:hover, .nav-menu a.active {
   background: var(--hijau);
   color: #fff;
 }
 
-.nav-menu a.active::after {
-  display: none;
-}
+#menu-toggle, .burger { display: none; }
 
-#menu-toggle {
-  display: none;
-}
 
-.burger {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
-  color: var(--hijau);
-}
-
-/* ---------- HERO EDUKASI ---------- */
-.hero-edukasi {
-  background: url("../image/lataredukasi.png") center/cover no-repeat;
-  padding: 56px 0;
+.hero {
+  background: url("../image/lataredukasi.jpg") center/cover no-repeat;
+  padding: 50px 0;
   border-bottom: 1px solid #dcebdc;
 }
 
-.hero-edukasi-teks {
-  background: rgba(250, 249, 242, 0.92);
-  padding: 28px;
-  border-radius: 20px;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 6px 24px rgba(31, 122, 61, 0.15);
-  max-width: 700px;
+.hero-box {
+  background: rgba(250, 249, 242, 0.9);
+  padding: 24px;
+  border-radius: 16px;
+  max-width: 650px;
+  box-shadow: 0 4px 20px rgba(31, 122, 61, 0.1);
 }
 
-.hero-edukasi h1 {
-  font-size: clamp(24px, 4vw, 36px);
-  line-height: 1.25;
-  margin: 12px 0 8px;
+.tag {
+  background: var(--kuning);
+  font-weight: 600;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 99px;
+}
+
+.hero h1 {
+  font-size: clamp(24px, 3.5vw, 34px);
   color: var(--hijau);
+  margin: 10px 0 6px;
 }
 
-.hero-edukasi p {
-  margin: 0;
-  color: var(--abu);
-}
+.section { padding: 32px 0 20px; }
 
-/* ---------- GRID KARTU EDUKASI ---------- */
-.edukasi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  margin-top: 24px;
-}
 
-.kartu-edukasi {
-  background: var(--putih);
-  border: 1px solid #dcebdc;
-  border-radius: 18px;
-  padding: 20px;
-  box-shadow: 0 2px 10px rgba(31, 122, 61, 0.06);
-  transition: transform .2s ease, box-shadow .2s ease;
+.grid-vertical {
   display: flex;
   flex-direction: column;
+  gap: 24px;
+  max-width: 800px;
+  margin: 24px auto 0 auto;
 }
 
-.kartu-edukasi:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(31, 122, 61, 0.12);
+
+.card {
+  background: var(--putih);
+  border: 1px solid #dcebdc;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(31, 122, 61, 0.05);
+  transition: transform .2s;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.kartu-edukasi h3 {
-  color: var(--hijau);
-  margin: 14px 0 8px;
-  font-size: 18px;
+.card:hover { transform: translateY(-3px); }
+
+.card h3 { 
+  color: var(--hijau); 
+  margin: 0; 
+  font-size: 19px; 
 }
 
-.kartu-edukasi p {
-  color: var(--abu);
-  font-size: 14px;
-  margin: 0;
-}
-
-.ph-edukasi {
-  height: 180px;
-  border-radius: 14px;
+.img-box {
+  width: 100%;
+  height: 250px;
+  border-radius: 12px;
   background: var(--hijau-pucat);
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
 }
 
-.ph-edukasi.foto img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.img-box img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
   display: block;
 }
 
-/* ---------- KOTAK CATATAN / INFO ---------- */
-.catatan-info {
+
+.sumber {
+  font-size: 12px;
+  color: var(--abu);
+  font-style: italic;
+}
+
+.sumber a {
+  color: var(--hijau);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.sumber a:hover {
+  text-decoration: underline;
+  color: var(--hijau-muda);
+}
+
+.card p { 
+  color: var(--abu); 
+  font-size: 14px; 
+  margin: 0; 
+  text-align: justify;
+}
+
+
+.notice {
   background: var(--kuning-pucat);
   border: 1px solid var(--kuning);
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 2px 10px rgba(246, 201, 40, 0.15);
+  border-radius: 14px;
+  padding: 20px;
 }
 
-.catatan-info h3 {
-  color: var(--hijau);
-  margin-top: 0;
-  margin-bottom: 8px;
-}
+.notice h3 { color: var(--hijau); margin: 0 0 6px; }
 
-.catatan-info p {
-  margin: 0;
-  color: var(--teks);
-}
-
-/* ---------- FOOTER ---------- */
 footer {
   background: var(--hijau);
   color: #e8f7ec;
   text-align: center;
-  padding: 22px;
+  padding: 20px;
   font-size: 13px;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
-footer b {
-  color: var(--kuning);
+footer b { color: var(--kuning); }
+
+
+@media (max-width: 768px) {
+  .burger { display: block; font-size: 24px; cursor: pointer; color: var(--hijau); }
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: var(--putih);
+    flex-direction: column;
+    padding: 10px 20px;
+    border-bottom: 3px solid var(--kuning);
+  }
+  #menu-toggle:checked ~ .nav-menu { display: flex; }
+
+  .card {
+    padding: 16px;
+  }
+
+  .img-box {
+    height: 180px;
+  }
 }
 
-/* =========================================================
-   RESPONSIF (TABLET & IPAD: max-width 992px)
-   ========================================================= */
-@media (max-width: 992px) {
-  .wrap {
-    padding: 0 24px;
-  }
-
-  .hero-edukasi {
-    padding: 44px 0;
-  }
-
-  .hero-edukasi-teks {
-    max-width: 100%;
-  }
-
-  .edukasi-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-  }
-}
-
-/* =========================================================
-   RESPONSIF (SMARTPHONE / HP: max-width 760px)
-   ========================================================= */
-@media (max-width: 760px) {
+@media (max-width: 768px) {
+  
   .wrap {
     padding: 0 16px;
   }
 
-  /* Navigation Mobile Toggle */
-  .burger {
-    display: block;
+  
+  .burger { 
+    display: block; 
+    font-size: 24px; 
+    cursor: pointer; 
+    color: var(--hijau); 
   }
 
+ 
   .nav-menu {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: 100%; 
+    left: 0; 
     right: 0;
     background: var(--putih);
     flex-direction: column;
     padding: 10px 20px;
     border-bottom: 3px solid var(--kuning);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   }
 
-  #menu-toggle:checked ~ .nav-menu {
-    display: flex;
+  #menu-toggle:checked ~ .nav-menu { 
+    display: flex; 
   }
 
-  /* Hero & Content adjustments */
-  .hero-edukasi {
-    padding: 30px 0;
+ 
+  .card {
+    padding: 16px;
+    gap: 10px;
+    border-radius: 14px;
   }
 
-  .hero-edukasi-teks {
-    padding: 20px;
-    border-radius: 16px;
-  }
-
-  .seksi {
-    padding-top: 28px;
-  }
-
-  /* Grid Kartu pada HP (Menjadi 1 Kolom Full Width) */
-  .edukasi-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .ph-edukasi {
+  
+  .img-box {
     height: 190px;
+    border-radius: 10px;
   }
 
-  .catatan-info {
+ 
+  .card h3 {
+    font-size: 17px;
+  }
+
+ 
+  .card p {
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+
+  
+  .hero {
+    padding: 35px 0;
+  }
+
+  .hero-box {
     padding: 18px;
+    border-radius: 12px;
   }
 }
