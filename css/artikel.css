@@ -1,4 +1,4 @@
-/* ===== artikel.css (Tema Hijau Konsisten & Simetris) ===== */
+/* ===== artikel.css (Lengkap & Teruji) ===== */
 
 :root {
   --hijau: #1f7a3d;
@@ -113,20 +113,14 @@ body {
   display: none;
 }
 
-.sumber-link {
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 12px;
-  color: var(--hijau);
-  text-decoration: underline;
-  font-weight: 500;
-  transition: color 0.2s ease;
+/* ---------- HERO EDUKASI (Background konsultasi.jpg + Overlay Hijau) ---------- */
+.hero-edukasi {
+  background: 
+    linear-gradient(135deg, rgba(20, 85, 40, 0.75) 0%, rgba(31, 122, 61, 0.82) 100%),
+    url("../image/konsultasi.jpg") center/cover no-repeat;
+  padding: 60px 0;
+  border-bottom: 4px solid var(--hijau);
 }
-
-.sumber-link:hover {
-  color: var(--hijau-muda);
-}
-
 
 .hero-edukasi-teks {
   background: rgba(255, 255, 255, 0.95);
@@ -184,7 +178,7 @@ body {
 .kartu-edukasi p {
   color: var(--abu);
   font-size: 14px;
-  margin: 0;
+  margin-bottom: 8px;
 }
 
 .ph-edukasi {
@@ -203,6 +197,21 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+/* Styling tautan sumber gambar meditasi */
+.sumber-link {
+  display: inline-block;
+  margin-top: auto;
+  font-size: 12px;
+  color: var(--hijau);
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.sumber-link:hover {
+  color: var(--hijau-muda);
 }
 
 /* ---------- KOTAK CATATAN ---------- */
