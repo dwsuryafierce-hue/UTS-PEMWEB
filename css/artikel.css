@@ -113,6 +113,19 @@ body {
   display: none;
 }
 
+.sumber-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--hijau);
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.sumber-link:hover {
+  color: var(--hijau-muda);
+}
 
 
 .hero-edukasi-teks {
