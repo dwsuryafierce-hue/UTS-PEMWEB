@@ -1,4 +1,4 @@
-/* ===== artikel.css (Nuansa Lebih Hijau & Banner edukasi.png) ===== */
+/* ===== artikel.css (Tema Hijau Konsisten & Simetris) ===== */
 
 :root {
   --hijau: #1f7a3d;
@@ -26,7 +26,7 @@ html, body {
 body {
   font-family: 'Poppins', system-ui, sans-serif;
   color: var(--teks);
-  background: #f4f9f5; /* Lebih hijau pucat lembut */
+  background: #f4f9f5;
   line-height: 1.65;
 }
 
@@ -113,22 +113,21 @@ body {
   display: none;
 }
 
-/* ---------- HERO EDUKASI (LATAR EDUKASI.PNG & LEBIH HIJAU) ---------- */
+/* ---------- HERO EDUKASI (Background konsultasi.jpg + Overlay Hijau) ---------- */
 .hero-edukasi {
-  /* Menggabungkan overlay warna hijau dengan gambar edukasi.png */
   background: 
-    linear-gradient(135deg, rgba(31, 122, 61, 0.35) 0%, rgba(20, 85, 40, 0.45) 100%),
-    url("../image/edukasi.png") center/cover no-repeat;
+    linear-gradient(135deg, rgba(20, 85, 40, 0.75) 0%, rgba(31, 122, 61, 0.82) 100%),
+    url("../image/konsultasi.jpg") center/cover no-repeat;
   padding: 60px 0;
   border-bottom: 4px solid var(--hijau);
 }
 
 .hero-edukasi-teks {
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.95);
   padding: 30px;
   border-radius: 20px;
   backdrop-filter: blur(8px);
-  box-shadow: 0 8px 24px rgba(20, 85, 40, 0.18);
+  box-shadow: 0 8px 24px rgba(20, 85, 40, 0.2);
   border-left: 6px solid var(--hijau);
   max-width: 680px;
 }
