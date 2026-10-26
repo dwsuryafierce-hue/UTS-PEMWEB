@@ -1,82 +1,94 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Edukasi | LIVORA</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/edukasi.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Edukasi | Livora - live well, be you.</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/edukasi.css">
 </head>
 <body>
 
-  <!-- Header + Navigasi -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">LIVORA</a>
-      <nav aria-label="Navigasi utama">
-        <ul class="nav-list">
-          <li><a href="index.html">Beranda</a></li>
-          <li><a href="edukasi.html" class="active" aria-current="page">Edukasi</a></li>
-          <li><a href="panduan.html">Panduan</a></li>
-          <li><a href="informasi.html">Informasi</a></li>
-          <li><a href="tentang.html">Tentang</a></li>
-        </ul>
-      </nav>
+<!-- NAVBAR -->
+<nav class="navbar"><div class="wrap">
+  <a class="logo" href="index.html">
+    <img src="image/logolivora.jpeg" alt="Logo Livora">
+  </a>
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="burger">☰</label>
+  <ul class="nav-menu">
+    <li><a href="index.html">Beranda</a></li>
+    <li><a href="edukasi.html" class="active">Edukasi</a></li>
+    <li><a href="panduan.html">Panduan</a></li>
+    <li><a href="artikel.html">Artikel</a></li>
+    <li><a href="tentang.html">Tentang</a></li>
+  </ul>
+</div></nav>
+
+<!-- HEADER / HERO SECTION EDUKASI -->
+<header class="hero-edukasi">
+  <div class="wrap">
+    <div class="hero-edukasi-teks">
+      <span class="tag">Pusat Pengetahuan</span>
+      <h1>Mengenal Lebih Dekat Pilar-Pilar Hidup Sehat</h1>
+      <p>Edukasi seputar gizi, aktivitas fisik, dan pencegahan dini untuk membangun kualitas hidup yang berkelanjutan demi masa depan yang lebih bugar.</p>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="container">
-        <span class="tag">Pusat Pengetahuan</span>
-        <h1>Menuju Kehidupan Sehat dan Sejahtera</h1>
-        <p>Memahami esensi SDG 3 melalui kesadaran kolektif, pencegahan dini, dan komitmen membangun kualitas hidup yang berkelanjutan.</p>
+<!-- KONTEN UTAMA: PARAGRAF & TEMPAT GAMBAR (3 KOTAK/CARD) -->
+<section class="wrap seksi">
+  <h2>Memahami Pentingnya Edukasi Kesehatan Sejak Dini</h2>
+  <p>Pendidikan kesehatan memegang peranan krusial dalam membentuk kesadaran masyarakat, terutama generasi muda. Dengan memahami dasar-dasar kesehatan preventif, kita dapat mengantisipasi berbagai risiko penyakit tidak menular yang kini semakin marak di usia produktif.</p>
+  <p>Berikut adalah tiga pilar utama yang menjadi fokus edukasi dalam mewujudkan gaya hidup sehat sehari-hari:</p>
+
+  <!-- 3 TEMPAT / KARTU UNTUK GAMBAR -->
+  <div class="edukasi-grid">
+    
+    <!-- Tempat Gambar 1 -->
+    <div class="kartu-edukasi">
+      <div class="ph-edukasi foto">
+        <!-- Ganti src di bawah ini dengan gambar pilihanmu -->
+        <img src="image/makanan.jpg" alt="Ilustrasi Pilar Pertama">
       </div>
-    </section>
+      <h3>1. Nutrisi dan Pola Makan</h3>
+      <p>Asupan gizi yang seimbang memastikan tubuh mendapatkan energi optimal dan mikronutrien yang dibutuhkan untuk menjaga daya tahan tubuh serta fokus belajar.</p>
+    </div>
 
-    <!-- Konten Artikel Edukasi (Tanpa Poin) -->
-    <section class="container artikel-container">
-      
-      <article class="card-artikel">
-        <h2>Mewujudkan Tujuan Pembangunan Berkelanjutan (SDG 3)</h2>
-        <p>
-          Kehidupan yang sehat dan kesejahteraan menyeluruh merupakan fondasi utama bagi kemajuan sebuah bangsa. Di dalam kerangka Sustainable Development Goals (SDG) pada poin ketiga, fokus utama diarahkan pada upaya menjamin kehidupan yang sehat serta mendorong kesejahteraan bagi seluruh masyarakat di berbagai kelompok usia. Tantangan kesehatan global saat ini tidak hanya berkutat pada penanganan penyakit menular, tetapi juga mencakup pencegahan penyakit tidak menular, kesehatan mental, serta peningkatan akses layanan kesehatan yang merata.
-        </p>
-        <p>
-          Sebagai bagian dari komunitas global, kesadaran individu memegang peranan krusial. Setiap langkah kecil yang diambil dalam keseharian, mulai dari menjaga pola makan berimbang, mengelola stres dengan baik, hingga aktif bergerak, memberikan kontribusi nyata dalam menekan angka beban kesehatan masyarakat. Melalui edukasi yang berkelanjutan, masyarakat diharapkan mampu bertransformasi dari sekadar objek pasif menjadi agen perubahan yang peduli terhadap kesehatan diri sendiri dan lingkungan sekitar.
-        </p>
-      </article>
+    <!-- Tempat Gambar 2 -->
+    <div class="kartu-edukasi">
+      <div class="ph-edukasi foto">
+        <!-- Ganti src di bawah ini dengan gambar pilihanmu -->
+        <img src="image/lari.png" alt="Ilustrasi Pilar Kedua">
+      </div>
+      <h3>2. Rutinitas Gerak Aktif</h3>
+      <p>Mengurangi waktu duduk yang terlalu lama dan membiasakan diri beraktivitas fisik membantu menjaga kesehatan kardiovaskular dan kebugaran otot.</p>
+    </div>
 
-      <article class="card-artikel">
-        <h2>Peran Strategis Pencegahan Dini dalam Kesehatan Preventif</h2>
-        <p>
-          Pendekatan preventif atau pencegahan jauh lebih efektif dan efisien dibandingkan dengan pendekatan kuratif atau pengobatan setelah jatuh sakit. Budaya melakukan pemeriksaan kesehatan secara berkala, memantau indeks massa tubuh, serta mengenali gejala awal suatu gangguan kesehatan dapat menyelamatkan banyak nyawa. Pencegahan dini juga membantu sistem layanan kesehatan publik agar tidak mengalami kelebihan beban, sehingga penanganan medis dapat difokuskan secara optimal bagi yang benar-benar membutuhkan.
-        </p>
-        <p>
-          Edukasi kesehatan masyarakat modern menekankan pentingnya literasi kesehatan digital. Dengan kemudahan akses informasi saat ini, individu dituntut untuk lebih bijak memilah sumber informasi medis yang valid dan berbasis ilmiah. Pemahaman yang benar mengenai nutrisi seimbang, pentingnya aktivitas fisik rutin, dan siklus istirahat yang cukup akan membentuk ketahanan tubuh yang tangguh dalam menghadapi dinamika gaya hidup masa kini yang serba cepat.
-        </p>
-      </article>
+    <!-- Tempat Gambar 3 -->
+    <div class="kartu-edukasi">
+      <div class="ph-edukasi foto">
+        <!-- Ganti src di bawah ini dengan gambar pilihanmu -->
+        <img src="image/tidur.png" alt="Ilustrasi Pilar Ketiga">
+      </div>
+      <h3>3. Manajemen Stres &amp; Istirahat</h3>
+      <p>Kesehatan mental yang terjaga serta kualitas tidur yang cukup adalah fondasi penting agar tubuh dapat melakukan regenerasi sel secara maksimal.</p>
+    </div>
 
-      <article class="card-artikel">
-        <h2>Sinergi Antara Lingkungan, Gaya Hidup, dan Kesejahteraan Mental</h2>
-        <p>
-          Kesehatan fisik tidak dapat dilepaskan dari kondisi lingkungan dan kesejahteraan mental seseorang. Ruang gerak yang aktif, paparan udara bersih, serta dukungan sosial yang positif menciptakan ekosistem hidup yang harmonis. Tekanan hidup akademis maupun profesional seringkali memicu kejenuhan mental yang berdampak buruk pada kesehatan fisik jika tidak dikelola dengan bijaksana. Oleh karena itu, menjaga keseimbangan antara produktivitas kerja dan waktu pemulihan diri adalah kunci utama tercapainya kesejahteraan yang utuh.
-        </p>
-        <p>
-          Melalui platform LIVORA, komitmen untuk menyebarluaskan nilai-nilai kesehatan universal terus diperkuat. Kolaborasi lintas sektor, pemanfaatan teknologi informasi yang tepat guna, serta semangat gotong royong dalam membangun kesadaran kolektif menjadi pilar penting agar cita-cita besar SDG 3 dapat terwujud secara nyata di tengah masyarakat luas.
-        </p>
-      </article>
+  </div>
+</section>
 
-    </section>
-  </main>
+<!-- SECTION TAMBAHAN: ARTIKEL / CATATAN -->
+<section class="wrap seksi" style="margin-bottom: 50px;">
+  <div class="catatan-info">
+    <h3>Catatan Penting</h3>
+    <p>Perubahan kecil yang konsisten jauh lebih berdampak daripada perubahan besar yang dilakukan secara instan. Mari mulai langkah pertama hari ini demi kualitas hidup yang lebih baik di masa depan.</p>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <p>&copy; 2026 <strong>LIVORA</strong> &middot; Dibuat untuk edukasi hidup sehat</p>
-  </footer>
+<!-- FOOTER -->
+<footer>© 2026 <b>Livora | SDG 3 | Alvin-Ratih-Yusa-Surya</b> · Dibuat untuk edukasi hidup sehat</footer>
 
 </body>
 </html>
