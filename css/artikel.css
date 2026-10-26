@@ -142,10 +142,11 @@ body {
   display: none;
 }
 
-.hero-edukasi { /* HERO EDUKASI */
+
+.hero-edukasi { /* Hero edukasi kata surplag */
   background: 
     linear-gradient(135deg, rgba(20, 85, 40, 0.75) 0%, rgba(31, 122, 61, 0.82) 100%),
-    url("../image/konsultasi.jpg") center/cover no-repeat;
+    url("../image/tidur.jpg") center/cover no-repeat;
   padding: 50px 0;
   border-bottom: 1px solid #dcebdc;
 }
