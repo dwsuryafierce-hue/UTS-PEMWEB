@@ -1,4 +1,3 @@
-
 :root {
   --hijau: #1f7a3d;
   --hijau-muda: #2e9e57;
@@ -62,7 +61,7 @@ body {
   color: var(--abu);
 }
 
-/*  NAVBAR */
+/* Nvigasi */
 .navbar {
   position: sticky;
   top: 0;
@@ -118,7 +117,7 @@ body {
   display: none;
 }
 
-/* HERO EDUKASI  */
+/* herooooo */
 .hero-edukasi {
   background: 
     linear-gradient(135deg, rgba(20, 85, 40, 0.75) 0%, rgba(31, 122, 61, 0.82) 100%),
@@ -149,8 +148,8 @@ body {
   color: var(--abu);
 }
 
-/* horizontall */
-.artikel-list-horizontal {
+
+.artikel-list-horizontal { /* ARTIKEL HORIZONTAL */
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -174,8 +173,7 @@ body {
   border-color: var(--hijau-muda);
 }
 
-/* Zig-Zag */
-.kartu-horizontal.dibalik {
+.kartu-horizontal.dibalik { /* Zig-Zag Layout */
   grid-template-columns: 1fr 280px;
 }
 
@@ -220,8 +218,8 @@ body {
   margin-bottom: 12px;
 }
 
-
-.sumber-link {  /* Tautan  */
+/* Tautan Sumber */
+.sumber-link {
   display: inline-block;
   font-size: 11.5px;
   color: var(--hijau);
@@ -235,9 +233,8 @@ body {
   color: var(--hijau-muda);
 }
 
-
-.catatan-info { /* KOTAK */
-  background: var(--hijau-pucat);
+.catatan-info { 
+  background: var(--hijau-pucat);  /* KOTAK CATATAN */
   border: 1px solid #b5e0c0;
   border-left: 6px solid var(--hijau);
   border-radius: 16px;
@@ -256,8 +253,7 @@ body {
   color: var(--teks);
 }
 
-/* FOOTER */
-footer {
+footer {  /* FOOTER */
   background: var(--hijau-tua);
   color: #e8f7ec;
   text-align: center;
@@ -270,8 +266,7 @@ footer b {
   color: var(--kuning);
 }
 
-/* RESPONSIF HP & TABLET */
-@media (max-width: 768px) {
+@media (max-width: 768px) {   /* RESPONSIF HP & TABLET */
   .burger {
     display: block;
     font-size: 26px;
@@ -296,7 +291,6 @@ footer b {
     display: flex;
   }
 
-  /* Ubah kartu  */
   .kartu-horizontal,
   .kartu-horizontal.dibalik {
     grid-template-columns: 1fr;
