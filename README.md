@@ -22,7 +22,7 @@ Website Edukasi Hidup Sehat dan Kesejahteraan (Mendukung SDG 3: Kehidupan Sehat 
 
 ## 📄 Struktur Halaman Website
 Website ini terdiri dari 5 halaman utama yang saling terhubung secara konsisten
-1. **Beranda (`index.html`)**: Halaman utama yang memuat sambutan (*hero section*), pengenalan target SDG 3, serta ringkasan data kesehatan nasional
+1. **Beranda (`indeks.html`)**: Halaman utama yang memuat sambutan (*hero section*), pengenalan target SDG 3, serta ringkasan data kesehatan nasional
 2. **Edukasi (`edukasi.html`)**: Pusat pengetahuan yang mengupas tiga pilar utama hidup sehat: nutrisi & pola makan, rutinitas gerak aktif, serta manajemen stres.
 3. **Panduan (`panduan.html`)**: Halaman interaktif yang dilengkapi Kalkulator BMI (Body Mass Index) mandiri, panduan "Isi Piringku", serta tips aktivitas fisik dan waktu tidur
 4. **Artikel (`artikel.html`)**: Rubrik wawasan khusus yang membahas statistik penting seputar kesehatan mental remaja, pentingnya berani mencari bantuan profesional, serta kiat merawat kewarasan
