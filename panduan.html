@@ -3,18 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Panduan | Livora - live well, be you.</title>
+<title>Panduan | Livora - live well, be you. </title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/panduan.css">
 </head>
 <body>
 
-<!-- ===== NAVBAR (sama dengan Beranda) ===== -->
 <nav class="navbar"><div class="wrap">
   <a class="logo" href="index.html">
-    <img src="image/logo.livora.png" alt="Logo Livora">
-  </a>
+  <img src="image/logo.livora.png" alt="Logo Livora">
+</a>
   <input type="checkbox" id="menu-toggle">
   <label for="menu-toggle" class="burger">☰</label>
   <ul class="nav-menu">
@@ -26,18 +24,21 @@
   </ul>
 </div></nav>
 
-<!-- ===== HERO ===== -->
-<header class="hero"><div class="container">
-  <span class="tag">Panduan Hidup Sehat</span>
-  <h1>Langkah nyata untuk hidup sehat</h1>
-  <p>Hitung BMI-mu, atur isi piringmu, dan mulai kebiasaan kecil yang berdampak besar.</p>
+<header class="hero"><div class="wrap hero-grid">
+  <div class="hero-teks">
+    <span class="tag">Livora - Panduan hidup sehat </span>
+    <h1>Panduan sederhana untuk mulai hidup sehat hari ini</h1>
+    <p>Hitung BMI-mu, atur isi piringmu, dan mulai kebiasaan kecil yang berdampak besar untuk tubuh dan pikiranmu.</p>
+    <a class="btn" href="#bmi">Mulai dari BMI</a>
+  </div>
+  <div class="hero-img">
+    <img src="image/ilustrasi.hidup.sehat.png" alt="Ilustrasi hidup sehat">
+  </div>
 </div></header>
 
-<!-- ===== ISI ===== -->
-<main class="container grid-2">
+<main class="wrap grid-2">
 
-  <!-- Kalkulator BMI -->
-  <section class="card">
+  <section class="card" id="bmi">
     <h2>Kalkulator BMI</h2>
     <label for="berat">Berat badan (kg)</label>
     <input type="number" id="berat" placeholder="Contoh: 55" min="1">
@@ -48,11 +49,10 @@
     <p class="sumber">Kategori mengacu pada Kemenkes RI. BMI hanya perkiraan awal, bukan diagnosis.</p>
   </section>
 
-  <!-- Isi Piringku -->
   <section class="card">
     <h2>Isi Piringku</h2>
     <div class="piring">
-      <img src="image/isi.piringku.png" alt="Ilustrasi Isi Piringku">
+      <img src="image/isipiring.jpg" alt="Ilustrasi Isi Piringku">
     </div>
     <ul class="centang">
       <li>½ piring: sayur dan buah</li>
@@ -63,9 +63,7 @@
     <p class="sumber">Sumber: Pedoman Isi Piringku, Kemenkes RI.</p>
   </section>
 
-  <!-- Aktivitas Fisik -->
   <section class="card">
-    <div class="ikon-box">🏃</div>
     <h2>Aktivitas Fisik</h2>
     <ul class="centang">
       <li>Minimal 150 menit per minggu (intensitas sedang)</li>
@@ -75,9 +73,7 @@
     <p class="sumber">Sumber: World Health Organization (WHO).</p>
   </section>
 
-  <!-- Tidur & Air -->
   <section class="card">
-    <div class="ikon-box ikon-kuning">😴</div>
     <h2>Tidur &amp; Cairan</h2>
     <ul class="centang">
       <li>Tidur 7–9 jam per hari untuk orang dewasa</li>
@@ -87,27 +83,20 @@
     <p class="sumber">Sumber: Kemenkes RI &amp; WHO.</p>
   </section>
 
-  <!-- Tabel BMI -->
-  <section class="card" style="grid-column: 1 / -1;">
+  <section class="card card-lebar">
     <h2>Kategori BMI</h2>
-    <div class="tabel-wrap">
-      <table>
-        <thead>
-          <tr><th>Kategori</th><th>Rentang BMI</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Kurus</td><td>&lt; 18,5</td></tr>
-          <tr><td>Normal</td><td>18,5 – 25,0</td></tr>
-          <tr><td>Gemuk (berat badan lebih)</td><td>25,1 – 27,0</td></tr>
-          <tr><td>Obesitas</td><td>&gt; 27,0</td></tr>
-        </tbody>
-      </table>
-    </div>
+    <ul class="centang">
+      <li><b>Kurus:</b> BMI di bawah 18,5</li>
+      <li><b>Normal:</b> BMI 18,5 – 25,0</li>
+      <li><b>Gemuk (berat badan lebih):</b> BMI 25,1 – 27,0</li>
+      <li><b>Obesitas:</b> BMI di atas 27,0</li>
+    </ul>
+    <p class="sumber">Sumber: Kemenkes RI.</p>
   </section>
 
 </main>
 
-<footer class="site-footer">© 2026 <strong>Livora | SDG 3 | Alvin-Ratih-Yusa-Surya</strong> · Dibuat untuk edukasi hidup sehat</footer>
+<footer>© 2026 <b>Livora | SDG 3 | Alvin-Ratih-Yusa-Surya</b> · Dibuat untuk edukasi hidup sehat</footer>
 
 <script>
 function hitungBMI() {
