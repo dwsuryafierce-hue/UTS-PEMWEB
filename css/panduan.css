@@ -1,307 +1,87 @@
-/* ===== panduan.css (CSS halaman Panduan) ===== */
+/* ===== panduan.css — halaman Panduan (berdiri sendiri, warna & gaya = Beranda) ===== */
 
-/* ===== Variabel warna ===== */
-:root {
-  --bg: #ffffff;
-  --card: #ffffff;
-  --garis: #d6ecdd;
-  --hijau: #1f7a3f;
-  --hijau-tua: #17622f;
-  --hijau-muda: #e8f5ec;
-  --kuning: #f5c518;
-  --gelap: #1b2a20;
-  --teks: #1f2d24;
-  --teks-redup: #5a6b60;
+/* ---------- WARNA & DASAR (sama dengan index.css) ---------- */
+:root{
+  --hijau:#1f7a3d; --hijau-muda:#2e9e57; --hijau-pucat:#e6f6ea;
+  --kuning:#f6c928; --kuning-pucat:#fff6cf;
+  --putih:#ffffff; --teks:#1d2b22; --abu:#5a6b60;
 }
+*{box-sizing:border-box}
+body{margin:0;font-family:'Poppins',system-ui,sans-serif;color:var(--teks);background:#fbfdf8;line-height:1.65}
+.wrap{max-width:1040px;margin:auto;padding:0 20px}
+h1,h2{color:var(--hijau)}
+p{color:var(--abu)}
+ul{list-style:none;margin:0;padding:0}
+.btn{display:inline-block;background:var(--hijau);color:#fff;border:0;padding:12px 26px;border-radius:99px;font:600 15px 'Poppins',sans-serif;text-decoration:none;cursor:pointer;box-shadow:0 4px 0 var(--kuning)}
+.btn:hover{background:var(--hijau-muda)}
 
-/* ===== Reset dasar ===== */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  font-family: 'Poppins', Arial, sans-serif;
-  background-color: var(--bg);
-  color: var(--teks);
-  line-height: 1.6;
-}
+/* ---------- NAVBAR (sama dengan Beranda) ---------- */
+.navbar{position:sticky;top:0;z-index:50;background:var(--putih);border-bottom:3px solid var(--kuning)}
+.navbar .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px}
+.logo{font-weight:700;color:var(--hijau);font-size:18px;text-decoration:none}
+.logo img{height:44px;width:auto;display:block}
+.nav-menu{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+.nav-menu a{position:relative;display:block;padding:8px 16px;color:var(--teks);text-decoration:none;font-size:14px;font-weight:500;border-radius:99px;transition:background .25s,color .25s}
+.nav-menu a::after{content:"";position:absolute;left:16px;right:16px;bottom:3px;height:3px;border-radius:3px;background:var(--kuning);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.nav-menu a:hover::after{transform:scaleX(1)}
+.nav-menu a:hover{background:var(--hijau-pucat);color:var(--hijau)}
+.nav-menu a.active{background:var(--hijau);color:#fff}
+.nav-menu a.active::after{display:none}
+#menu-toggle{display:none}
+.burger{display:none;font-size:26px;cursor:pointer;color:var(--hijau)}
 
-a { color: inherit; text-decoration: none; }
-ul { list-style: none; }
+/* ---------- HERO (sama dengan Beranda) ---------- */
+.hero{background:url("../image/gambar.latbel.beranda.png") center/cover no-repeat;padding:56px 0}
+.hero-teks{background:rgba(255,255,255,.82);padding:28px;border-radius:20px;backdrop-filter:blur(6px);box-shadow:0 6px 24px rgba(31,122,61,.15)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+.hero h1{font-size:clamp(28px,5vw,44px);line-height:1.2;margin:14px 0}
+.tag{display:inline-block;background:var(--kuning);color:#3a2f00;font-weight:600;font-size:12px;padding:4px 12px;border-radius:99px}
+.hero-img{width:100%;max-width:380px;aspect-ratio:1/1;margin:auto;border-radius:50%;overflow:hidden;box-shadow:0 10px 30px rgba(31,122,61,.25)}
+.hero-img img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.25)}
 
-/* Pembungkus isi agar rapi di tengah */
-.container {
-  width: 100%;
-  max-width: 1250px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
+/* ---------- GRID KARTU PANDUAN ---------- */
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;padding-top:44px;padding-bottom:64px}
+.card{background:var(--putih);border:1px solid #dcebdc;border-radius:22px;box-shadow:0 2px 10px rgba(31,122,61,.06);padding:26px;min-width:0}
+.card h2{color:var(--hijau);font-size:1.6rem;margin:0 0 16px}
+.card-lebar{grid-column:1 / -1}
 
-/* ===== Navbar (sama dengan Beranda) ===== */
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: var(--bg);
-  border-bottom: 3px solid var(--kuning);
-}
+/* ---------- FORM BMI ---------- */
+.card label{display:block;font-weight:600;margin:12px 0 8px;cursor:default}
+.card input{width:100%;padding:14px 16px;border-radius:14px;border:1px solid #bfdcc9;background:#fff;color:var(--teks);font-family:inherit;font-size:1rem}
+.card input::placeholder{color:#8a9a90}
+.card input:focus-visible,.btn:focus-visible,.nav-menu a:focus-visible{outline:3px solid var(--hijau);outline-offset:2px}
+.card .btn{margin-top:20px}
+.hasil{margin:16px 0 0;font-weight:600;color:var(--hijau)}
+.sumber{margin-top:18px;font-size:12px;border-left:4px solid var(--kuning);padding-left:10px}
 
-.navbar .wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1250px;
-  margin: auto;
-  padding: 12px 24px;
-}
+/* ---------- ISI PIRINGKU ---------- */
+.piring{width:220px;height:220px;margin:0 auto 24px;border-radius:50%;border:6px solid var(--kuning);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#fff}
+.piring img{width:100%;height:100%;object-fit:cover}
 
-.logo img {
-  height: 44px;
-  width: auto;
-  display: block;
-}
+/* ---------- KARTU BAWAH ---------- */
+.ikon-box{display:flex;align-items:center;justify-content:center;height:130px;margin-bottom:18px;border-radius:16px;background:var(--hijau-pucat);font-size:3.6rem}
+.ikon-kuning{background:var(--kuning-pucat)}
+.centang li{position:relative;padding-left:34px;margin-bottom:12px;font-size:1rem;color:var(--abu)}
+.centang li::before{content:"✓";position:absolute;left:0;color:var(--hijau);font-weight:700}
 
-.nav-menu {
-  display: flex;
-  gap: 8px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+/* ---------- TABEL ---------- */
+.tabel-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:360px}
+th{background:var(--hijau);color:#fff;text-align:left;padding:14px 12px}
+td{padding:14px 12px;border-bottom:1px solid #dcebdc;background:#fff;color:var(--teks)}
 
-.nav-menu a {
-  display: block;
-  padding: 8px 18px;
-  color: var(--teks);
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: 999px;
-  transition: background .25s, color .25s;
-}
+/* ---------- FOOTER (sama dengan Beranda) ---------- */
+footer{background:var(--hijau);color:#e8f7ec;text-align:center;padding:22px;font-size:13px;margin-top:40px}
+footer b{color:var(--kuning)}
 
-.nav-menu a:hover {
-  background: var(--hijau-muda);
-  color: var(--hijau);
+/* ---------- TAMPILAN HP ---------- */
+@media(max-width:900px){
+  .grid-2{grid-template-columns:1fr}
 }
-
-.nav-menu a.active {
-  background: var(--hijau);
-  color: #fff;
-}
-
-#menu-toggle { display: none; }
-
-.burger {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
-  color: var(--hijau);
-  margin: 0;
-}
-
-/* ===== Hero ===== */
-.hero {
-  /* lapisan gelap tipis supaya tulisan tetap terbaca di atas gambar */
-  background:
-    linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)),
-    url('../image/bgpanduan.jpg');
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  padding: 40px 0 56px;
-}
-.tag {
-  display: inline-block;
-  background: var(--kuning);
-  color: var(--gelap);
-  font-weight: 700;
-  font-size: .9rem;
-  padding: 6px 16px;
-  border-radius: 999px;
-  margin-bottom: 14px;
-}
-.hero h1 {
-  font-size: clamp(2rem, 5vw, 3.4rem);
-  line-height: 1.15;
-  font-weight: 700;
-  color: #fff;
-}
-.hero p {
-  margin-top: 10px;
-  font-size: 1.15rem;
-  font-weight: 500;
-  color: #fff;
-}
-
-/* ===== Grid 2 kolom untuk kartu (CSS Grid) ===== */
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  padding-top: 40px;
-  padding-bottom: 64px;
-  max-width: 1000px;
-}
-
-.card {
-  background: var(--card);
-  border: 1px solid var(--garis);
-  border-radius: 24px;
-  box-shadow: 0 6px 20px rgba(31, 122, 63, .08);
-  padding: 26px;
-  min-width: 0;
-}
-.card h2 {
-  color: var(--hijau);
-  font-size: 1.7rem;
-  margin-bottom: 18px;
-}
-
-/* ===== Form BMI ===== */
-label {
-  display: block;
-  font-weight: 600;
-  margin: 12px 0 8px;
-}
-input {
-  width: 100%;
-  padding: 16px 18px;
-  border-radius: 14px;
-  border: 1px solid #bfdcc9;
-  background: var(--bg);
-  color: var(--teks);
-  font-family: inherit;
-  font-size: 1.1rem;
-}
-input::placeholder { color: #8a9a90; }
-input:focus-visible,
-.btn:focus-visible,
-.nav-menu a:focus-visible {
-  outline: 3px solid var(--hijau);
-  outline-offset: 2px;
-}
-
-.btn {
-  margin-top: 22px;
-  padding: 12px 30px;
-  border: none;
-  border-bottom: 4px solid var(--kuning);
-  border-radius: 999px;
-  background: var(--hijau);
-  color: var(--bg);
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 1.1rem;
-  cursor: pointer;
-}
-.btn:hover { background: var(--hijau-tua); }
-
-.hasil {
-  margin-top: 16px;
-  font-weight: 600;
-  color: var(--hijau);
-}
-
-.sumber {
-  margin-top: 18px;
-  padding-left: 12px;
-  border-left: 4px solid var(--kuning);
-  font-size: .9rem;
-  color: var(--teks-redup);
-}
-
-/* ===== Isi Piringku ===== */
-.piring {
-  width: 220px;
-  height: 220px;
-  margin: 0 auto 24px;
-  border-radius: 50%;
-  border: 6px solid var(--kuning);
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-}
-
-.piring img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* ===== Kartu bawah ===== */
-.ikon-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 136px;
-  margin-bottom: 20px;
-  border-radius: 16px;
-  background: var(--hijau-muda);
-  font-size: 3.6rem;
-}
-.ikon-kuning { background: #fff6cf; }
-
-.centang li {
-  position: relative;
-  padding-left: 36px;
-  margin-bottom: 12px;
-  font-size: 1.1rem;
-}
-.centang li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: var(--hijau);
-  font-weight: 700;
-}
-
-/* ===== Tabel ===== */
-.tabel-wrap { overflow-x: auto; }
-table {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 460px;
-}
-th {
-  background: var(--hijau);
-  color: #fff;
-  text-align: left;
-  padding: 14px 12px;
-}
-td {
-  padding: 14px 12px;
-  border-bottom: 1px solid var(--garis);
-  background: #fff;
-}
-
-/* ===== Footer ===== */
-.site-footer {
-  background: var(--hijau);
-  color: #fff;
-  text-align: center;
-  padding: 36px 16px;
-}
-.site-footer strong { color: var(--kuning); }
-
-/* ===== Media queries (responsif) ===== */
-@media (max-width: 900px) {
-  .grid-2 { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 760px) {
-  .burger { display: block; }
-  .nav-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--bg);
-    flex-direction: column;
-    padding: 10px 20px;
-    border-bottom: 3px solid var(--kuning);
-  }
-  #menu-toggle:checked ~ .nav-menu {
-    display: flex;
-  }
+@media(max-width:760px){
+  .burger{display:block}
+  .nav-menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--putih);flex-direction:column;padding:10px 20px;border-bottom:3px solid var(--kuning)}
+  #menu-toggle:checked ~ .nav-menu{display:flex}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-img{max-width:280px}
 }
