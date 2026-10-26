@@ -1,4 +1,4 @@
-/* ===== informasi.css (CSS halaman Informasi) ===== */
+/* ===== artikel.css (CSS halaman Artikel) ===== */
 
 /* ---------- WARNA & DASAR ---------- */
 :root {
@@ -137,7 +137,7 @@ body {
   color: var(--hijau);
 }
 
-/* ---------- HERO INFORMASI ---------- */
+/* ---------- HERO ARTIKEL ---------- */
 .hero-edukasi {
   background: url("../image/lataredukasi.png") center/cover no-repeat;
   padding: 56px 0;
@@ -165,7 +165,7 @@ body {
   color: var(--abu);
 }
 
-/* ---------- GRID KARTU INFORMASI ---------- */
+/* ---------- GRID KARTU ARTIKEL ---------- */
 .edukasi-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
