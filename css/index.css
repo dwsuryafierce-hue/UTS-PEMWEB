@@ -35,7 +35,7 @@ p{color:var(--abu)}
 
 /* ---------- HERO ---------- */
 .hero{
-  background:url("../image/gambar.latbel.beranda.png") center/cover no-repeat;
+  background:url("../image/beranda/background.beranda.png") center/cover no-repeat;
   padding:56px 0;
 }
 .hero-teks{
@@ -83,7 +83,7 @@ p{color:var(--abu)}
   margin-top:40px;
   background:
     linear-gradient(rgba(20,90,45,.72), rgba(20,90,45,.72)),
-    url("../image/latar.belakang.2.png") center/cover no-repeat;
+    url("../image/beranda/bg.beranda.2.png") center/cover no-repeat;
   color:#fff;
   border-radius:22px;
   padding:28px;
@@ -102,6 +102,15 @@ p{color:var(--abu)}
 .target p{margin:0;font-size:14px}
 .target.sorot{background:var(--kuning-pucat);border-color:var(--kuning)}
 .target.sorot .no{background:var(--kuning);color:#3a2f00}
+
+/* ---------- SUMBER GAMBAR ---------- */
+.sumber-gambar{margin-top:40px}
+.sumber-gambar h2{font-size:20px;margin:0 0 6px}
+.sumber-gambar p{font-size:14px;margin:0 0 8px}
+.sumber-gambar ol{margin:0;padding-left:22px;font-size:13px;color:var(--abu)}
+.sumber-gambar li{padding:3px 0}
+.sumber-gambar a{color:var(--hijau);text-decoration:none;word-break:break-word}
+.sumber-gambar a:hover{text-decoration:underline;color:var(--hijau-muda)}
 
 /* ---------- FOOTER ---------- */
 footer{background:var(--hijau);color:#e8f7ec;text-align:center;padding:22px;font-size:13px;margin-top:40px}
