@@ -11,21 +11,23 @@
 </head>
 <body>
 
-  <!-- Header + navigasi -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo"><img src="image/logo.jpeg" alt="Livora - Live Well and Be You"></a>
-      <nav aria-label="Navigasi utama">
-        <ul class="nav-list">
-          <li><a href="index.html">Beranda</a></li>
-          <li><a href="edukasi.html">Edukasi</a></li>
-          <li><a href="panduan.html" class="active" aria-current="page">Panduan</a></li>
-          <li><a href="informasi.html">Informasi</a></li>
-          <li><a href="tentang.html">Tentang</a></li>
-        </ul>
-      </nav>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="wrap">
+      <a class="logo" href="index.html">
+        <img src="image/logo.livora.png" alt="Logo Livora">
+      </a>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="burger">☰</label>
+      <ul class="nav-menu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="edukasi.html">Edukasi</a></li>
+        <li><a href="panduan.html" class="active">Panduan</a></li>
+        <li><a href="artikel.html">Artikel</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+      </ul>
     </div>
-  </header>
+  </nav>
 
   <main>
     <!-- Hero -->
@@ -97,9 +99,7 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>&copy; 2026 <strong>Sehat Sejahtera SDG 3</strong> &middot; Dibuat untuk edukasi hidup sehat</p>
-  </footer>
+  <footer>© 2026 <b>Livora | SDG 3 | Alvin-Ratih-Yusa-Surya</b> · Dibuat untuk edukasi hidup sehat</footer>
 
   <script>
     // Kalkulator BMI: BMI = berat (kg) / (tinggi dalam meter)^2
