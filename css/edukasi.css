@@ -27,7 +27,7 @@ body {
   padding: 0 20px;
 }
 
-/* NAVBAR */
+
 .navbar {
   position: sticky;
   top: 0;
@@ -250,7 +250,7 @@ footer b { color: var(--kuning); }
     padding: 0 16px;
   }
 
-  
+ 
   .burger { 
     display: block; 
     font-size: 24px; 
@@ -276,14 +276,14 @@ footer b { color: var(--kuning); }
     display: flex; 
   }
 
- 
+  
   .card {
     padding: 16px;
     gap: 10px;
     border-radius: 14px;
   }
 
-  
+ 
   .img-box {
     height: 190px;
     border-radius: 10px;
@@ -300,7 +300,7 @@ footer b { color: var(--kuning); }
     line-height: 1.55;
   }
 
-  
+ 
   .hero {
     padding: 35px 0;
   }
