@@ -1,3 +1,5 @@
+/* ===== panduan.css (CSS halaman Panduan) ===== */
+
 /* ===== Variabel warna ===== */
 :root {
   --bg: #ffffff;
@@ -32,98 +34,78 @@ ul { list-style: none; }
   padding: 0 24px;
 }
 
-/* ===== Header & navigasi (Flexbox) ===== */
-/* ---------- NAVBAR (Disamakan dengan Panduan) ---------- */
-.site-header {
-  background: var(--putih);
-  border-bottom: 3px solid var(--kuning);
+/* ===== Navbar (sama dengan Beranda) ===== */
+.navbar {
   position: sticky;
   top: 0;
   z-index: 50;
+  background: var(--bg);
+  border-bottom: 3px solid var(--kuning);
 }
 
-.header-inner {
+.navbar .wrap {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  justify-content: space-between;
+  max-width: 1250px;
+  margin: auto;
+  padding: 12px 24px;
 }
 
-.site-header .logo img {
-  height: 60px;
+.logo img {
+  height: 44px;
   width: auto;
   display: block;
-  max-height: 100%;
 }
 
-.logo {
-  font-weight: 700;
-  font-size: 1.4rem;
-  color: var(--hijau);
-  text-decoration: none;
-}
-
-.nav-list {
+.nav-menu {
   display: flex;
-  flex-wrap: wrap;
   gap: 8px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.nav-list a {
+.nav-menu a {
   display: block;
   padding: 8px 18px;
-  border-radius: 999px;
-  font-weight: 600;
-  font-size: 14px;
   color: var(--teks);
   text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 999px;
   transition: background .25s, color .25s;
 }
 
-.nav-list a:hover {
-  background: var(--hijau-pucat);
+.nav-menu a:hover {
+  background: var(--hijau-muda);
   color: var(--hijau);
 }
 
-.nav-list a.active {
+.nav-menu a.active {
   background: var(--hijau);
   color: #fff;
 }
 
-/* Responsif HP untuk Navbar */
-@media(max-width: 760px) {
-  .burger {
-    display: block !important;
-  }
-  .nav-list {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--putih);
-    flex-direction: column;
-    padding: 10px 20px;
-    border-bottom: 3px solid var(--kuning);
-  }
-  #menu-toggle:checked ~ nav .nav-list,
-  #menu-toggle:checked ~ .nav-list {
-    display: flex;
-  }
+#menu-toggle { display: none; }
+
+.burger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: var(--hijau);
+  margin: 0;
 }
-/* ===== Hero ===== */
+
 /* ===== Hero ===== */
 .hero {
-  background:url('../image/bgpanduan.jpg');
+  /* lapisan gelap tipis supaya tulisan tetap terbaca di atas gambar */
+  background:
+    linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)),
+    url('../image/bgpanduan.jpg');
   background-size: cover;
   background-position: center;
-  color: var(--bg);
+  color: #fff;
   padding: 40px 0 56px;
 }
 .tag {
@@ -140,7 +122,7 @@ ul { list-style: none; }
   font-size: clamp(2rem, 5vw, 3.4rem);
   line-height: 1.15;
   font-weight: 700;
-  color: #008000;
+  color: #fff;
 }
 .hero p {
   margin-top: 10px;
@@ -165,7 +147,7 @@ ul { list-style: none; }
   border-radius: 24px;
   box-shadow: 0 6px 20px rgba(31, 122, 63, .08);
   padding: 26px;
-  min-width: 0; /* supaya tabel tidak melebarkan kartu */
+  min-width: 0;
 }
 .card h2 {
   color: var(--hijau);
@@ -192,7 +174,7 @@ input {
 input::placeholder { color: #8a9a90; }
 input:focus-visible,
 .btn:focus-visible,
-.nav-list a:focus-visible {
+.nav-menu a:focus-visible {
   outline: 3px solid var(--hijau);
   outline-offset: 2px;
 }
@@ -218,7 +200,6 @@ input:focus-visible,
   color: var(--hijau);
 }
 
-/* Catatan sumber di tiap kartu */
 .sumber {
   margin-top: 18px;
   padding-left: 12px;
@@ -226,8 +207,6 @@ input:focus-visible,
   font-size: .9rem;
   color: var(--teks-redup);
 }
-
-/* ===== Isi Piringku ===== */
 
 /* ===== Isi Piringku ===== */
 .piring {
@@ -248,6 +227,7 @@ input:focus-visible,
   height: 100%;
   object-fit: cover;
 }
+
 /* ===== Kartu bawah ===== */
 .ikon-box {
   display: flex;
@@ -275,7 +255,7 @@ input:focus-visible,
   font-weight: 700;
 }
 
-/* ===== Tabel (scroll di dalam wrapper, bukan di body) ===== */
+/* ===== Tabel ===== */
 .tabel-wrap { overflow-x: auto; }
 table {
   width: 100%;
@@ -304,18 +284,24 @@ td {
 .site-footer strong { color: var(--kuning); }
 
 /* ===== Media queries (responsif) ===== */
-
-/* Tablet (<= 900px): kartu jadi 1 kolom */
 @media (max-width: 900px) {
   .grid-2 { grid-template-columns: 1fr; }
 }
 
-/* Smartphone (<= 600px): navigasi & ukuran font dikecilkan */
-@media (max-width: 600px) {
-  .container { padding: 0 16px; }
-  .header-inner { justify-content: center; }
-  .nav-list { justify-content: center; }
-  .nav-list a { padding: 6px 12px; font-size: .9rem; }
-  .card { padding: 20px; }
-  .card h2 { font-size: 1.4rem; }
+@media (max-width: 760px) {
+  .burger { display: block; }
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    flex-direction: column;
+    padding: 10px 20px;
+    border-bottom: 3px solid var(--kuning);
+  }
+  #menu-toggle:checked ~ .nav-menu {
+    display: flex;
+  }
 }
