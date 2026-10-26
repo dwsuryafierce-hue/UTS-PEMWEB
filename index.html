@@ -1,23 +1,38 @@
 <!DOCTYPE html>
+<!-- ini buat ngasih tau browser kalau file ini HTML5, wajib ada di paling atas -->
 <html lang="id">
+<!-- lang="id" = ngasih tau browser kalau websiteku pakai bahasa Indonesia -->
 <head>
+<!-- HEAD = bagian "belakang layar", gak tampil di halaman tapi penting banget -->
 <meta charset="utf-8">
+<!-- biar huruf & simbol aneh (kayak ′ sama –) gak error jadi karakter acak -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- biar tampilan pas di layar HP, gak kekecilan -->
 <title>Halaman Utama | Livora - live well, be you. </title>
+<!-- tulisan yang muncul di tab browser -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- ambil font Poppins dari Google Fonts. angka 400-700 itu tebal tipisnya -->
 <link rel="stylesheet" href="css/style.css">
+<!-- CSS umum, dipakai semua halaman -->
 <link rel="stylesheet" href="css/index.css">
+<!-- CSS khusus halaman beranda ini aja -->
 </head>
 <body>
+<!-- BODY = semua yang kelihatan di layar -->
 
+<!-- ================= NAVBAR (menu paling atas) ================= -->
 <nav class="navbar"><div class="wrap">
   <a class="logo" href="index.html">
   <img src="image/beranda/logo.livora.png" alt="Logo Livora">
+  <!-- logonya sekalian jadi link, diklik balik ke beranda. alt = tulisan cadangan kalau gambarnya gagal muncul -->
 </a>
   <input type="checkbox" id="menu-toggle">
   <label for="menu-toggle" class="burger">☰</label>
+  <!-- trik menu burger di HP tanpa JavaScript: checkbox-nya disembunyiin, yang diklik ikon ☰ buat nyentang checkbox itu.
+       pas tercentang, CSS bakal munculin menunya -->
   <ul class="nav-menu">
     <li><a href="index.html" class="active">Beranda</a></li>
+    <!-- class="active" = penanda halaman yang lagi dibuka (warnanya hijau penuh) -->
     <li><a href="edukasi.html">Edukasi</a></li>
     <li><a href="panduan.html">Panduan</a></li>
     <li><a href="artikel.html">Artikel</a></li>
@@ -25,35 +40,47 @@
   </ul>
 </div></nav>
 
+<!-- ================= HERO (bagian pembuka paling atas) ================= -->
 <header class="hero"><div class="wrap hero-grid">
+  <!-- hero-grid = dibagi 2 kolom: teks di kiri, gambar bulat di kanan -->
   <div class="hero-teks">
     <span class="tag">Livora - Together, live well and be you </span>
+    <!-- label kecil warna kuning di atas judul -->
     <h1>Mendukung sepenuhnya SDG 3, untuk hidup yang lebih baik, dan sejahtera</h1>
+    <!-- h1 = judul utama, cukup 1 aja per halaman -->
     <p>Mulai dari hal kecil, seperti dari piring makanmu, langkah kakimu, sampai pikiranmu: hidup sehat itu sederhana kalau dilakukan bersama-sama.</p>
     <a class="btn" href="panduan.html">Ayo mulai hidup sehat-!</a>
+    <!-- tombol ajakan, diklik langsung ke halaman Panduan -->
   </div>
    <div class="hero-img">
     <img src="image/beranda/gambar.bulat.png" alt="Ilustrasi hidup sehat">
+    <!-- gambar ini bulatnya diatur di CSS (border-radius:50%), bukan dari filenya -->
   </div>
 </div></header>
 
+<!-- ================= PENJELASAN ISI SDG 3 ================= -->
 <section class="wrap seksi">
   <h2>Apa sih isi SDG 3?</h2>
   <p>SDG (<i>Sustainable Development Goals</i>) adalah 17 tujuan pembangunan berkelanjutan dari PBB. Tujuan ke-3 berbunyi: <b>menjamin kehidupan yang sehat dan mendukung kesejahteraan semua orang di segala usia</b>. Isinya dijabarkan dalam 13 target yang ditargetkan tercapai pada 2030. Ini beberapa yang paling dekat dengan kehidupan kita:</p>
+  <!-- <i> = huruf miring (buat istilah asing), <b> = huruf tebal (buat poin penting) -->
   <div class="target-grid">
+    <!-- wadah buat semua kotak target, nanti otomatis kebagi jadi beberapa kolom -->
     <div class="target">
       <span class="no">3.1</span>
+      <!-- kotak hijau kecil isinya nomor target -->
       <div><h3>Kesehatan Ibu</h3><p>Menurunkan angka kematian ibu hingga di bawah 70 per 100.000 kelahiran hidup.</p></div>
     </div>
     <div class="target">
       <span class="no">3.2</span>
       <div><h3>Kesehatan Bayi &amp; Balita</h3><p>Mengakhiri kematian bayi baru lahir dan balita yang sebenarnya bisa dicegah.</p></div>
+      <!-- &amp; itu kode HTML buat simbol "&", jangan diganti ya -->
     </div>
     <div class="target">
       <span class="no">3.3</span>
       <div><h3>Penyakit Menular</h3><p>Mengakhiri epidemi AIDS, TBC, dan malaria, serta melawan hepatitis dan penyakit bawaan air.</p></div>
     </div>
     <div class="target sorot">
+      <!-- "sorot" = class tambahan biar kotak ini jadi kuning, soalnya paling nyambung sama topik websiteku -->
       <span class="no">3.4</span>
       <div><h3>Penyakit Tidak Menular &amp; Kesehatan Mental</h3><p>Mengurangi sepertiga kematian dini akibat PTM lewat pencegahan dan pengobatan, serta mendorong kesehatan mental. <b>Paling dekat dengan kita.</b></p></div>
     </div>
@@ -67,42 +94,51 @@
     </div>
   </div>
   <p class="sumber">Masih ada 7 target lain, antara lain narkoba dan alkohol (3.5), kecelakaan lalu lintas (3.6), dan kesehatan reproduksi (3.7). Sumber: PBB (sdgs.un.org/goals/goal3).</p>
+  <!-- class "sumber" = teks kecil dengan garis kuning di kiri, khusus buat nyantumin sumber data -->
 </section>
 
+<!-- ================= 4 KARTU TOPIK (bagian yang tadi kuubah) ================= -->
 <section class="wrap seksi">
   <h2>Kenapa SDG 3 penting buat kita?</h2>
   <p>SDG 3 bertujuan menjamin kehidupan yang sehat dan meningkatkan kesejahteraan semua usia. Bagi generasi muda dan mahasiswa, kebiasaan kecil hari ini menentukan kesehatan di masa depan.</p>
   <div class="grid">
-    <a class="kartu" href="edukasi.html">
-  <div class="ph foto"><img src="image/beranda/makanan.bergizi.png" alt="Makanan bergizi seimbang"></div>
-  <h3>Gizi</h3>
-  <p>Hampir semua orang Indonesia (<b>96,7%</b>) belum makan sayur dan buah sesuai anjuran. Padahal gizi seimbang menopang energi belajar dan mencegah penyakit sejak muda.</p>
-  <span class="sumber-kartu">Sumber: Survei Kesehatan Indonesia 2023, Kemenkes RI</span>
-</a>
-    <a class="kartu" href="panduan.html">
-  <div class="ph kuning foto"><img src="image/beranda/aktivitas.fisik.jpg" alt="Remaja berolahraga"></div>
-  <h3>Aktivitas Fisik</h3>
-  <p><b>37,4%</b> penduduk Indonesia usia 10 tahun ke atas kurang bergerak, naik dari 26,1% pada 2013. Alasan terbanyaknya: merasa tidak ada waktu.</p>
-  <span class="sumber-kartu">Sumber: Survei Kesehatan Indonesia 2023, Kemenkes RI</span>
-</a>
-    <a class="kartu" href="informasi.html">
-  <div class="ph foto"><img src="image/beranda/kesehatan.mental.png" alt="Menjaga kesehatan mental"></div>
-  <h3>Kesehatan Mental</h3>
-  <p><b>1 dari 3 remaja</b> Indonesia (34,9%) mengalami masalah kesehatan mental dalam setahun terakhir, tetapi hanya 2,6% yang mencari bantuan.</p>
-  <span class="sumber-kartu">Sumber: I-NAMHS 2022 (remaja usia 10–17 tahun)</span>
-</a>
-    <a class="kartu" href="edukasi.html">
-  <div class="ph kuning foto"><img src="image/beranda/pencegahan.penyakit.png" alt="Pencegahan penyakit"></div>
-  <h3>Pencegahan Penyakit</h3>
-  <p><b>30,8%</b> orang dewasa Indonesia mengalami hipertensi dan <b>11,7%</b> penduduk usia 15+ mengidap diabetes. Keduanya bisa dicegah sejak muda lewat gaya hidup sehat.</p>
-  <span class="sumber-kartu">Sumber: Survei Kesehatan Indonesia 2023, Kemenkes RI</span>
-</a>
+    <!-- grid = kartu-kartunya berjejer otomatis, kalau layar sempit ya turun ke bawah sendiri -->
+    <!-- dulu kartu ini pakai <a> (link), sekarang kuganti <div> biar gak pindah halaman pas diklik -->
+    <div class="kartu">
+      <div class="ph foto"><img src="image/beranda/makanan.bergizi.png" alt="Makanan bergizi seimbang"></div>
+      <!-- "ph" = kotak tempat gambar, "foto" = tingginya 150px & gambarnya dipotong rapi biar pas -->
+      <h3>Gizi</h3>
+      <p>Hampir semua orang Indonesia (<b>96,7%</b>) belum makan sayur dan buah sesuai anjuran. Padahal gizi seimbang menopang energi belajar dan mencegah penyakit sejak muda.</p>
+      <span class="sumber-kartu">Sumber: Survei Kesehatan Indonesia 2023, Kemenkes RI</span>
+      <!-- sumber data di tiap kartu, biar infonya bisa dipertanggungjawabkan -->
+    </div>
+    <div class="kartu">
+      <div class="ph kuning foto"><img src="image/beranda/aktivitas.fisik.jpg" alt="Remaja berolahraga"></div>
+      <!-- "kuning" = latar kotak gambarnya kuning pucat, sengaja selang-seling sama hijau biar gak monoton -->
+      <h3>Aktivitas Fisik</h3>
+      <p><b>37,4%</b> penduduk Indonesia usia 10 tahun ke atas kurang bergerak, naik dari 26,1% pada 2013. Alasan terbanyaknya: merasa tidak ada waktu.</p>
+      <span class="sumber-kartu">Sumber: Survei Kesehatan Indonesia 2023, Kemenkes RI</span>
+    </div>
+    <div class="kartu">
+      <div class="ph foto"><img src="image/beranda/kesehatan.mental.png" alt="Menjaga kesehatan mental"></div>
+      <h3>Kesehatan Mental</h3>
+      <p><b>1 dari 3 remaja</b> Indonesia (34,9%) mengalami masalah kesehatan mental dalam setahun terakhir, tetapi hanya 2,6% yang mencari bantuan.</p>
+      <span class="sumber-kartu">Sumber: I-NAMHS 2022 (remaja usia 10–17 tahun)</span>
+    </div>
+    <div class="kartu">
+      <div class="ph kuning foto"><img src="image/beranda/pencegahan.penyakit.png" alt="Pencegahan penyakit"></div>
+      <h3>Pencegahan Penyakit</h3>
+      <p><b>30,8%</b> orang dewasa Indonesia mengalami hipertensi dan <b>11,7%</b> penduduk usia 15+ mengidap diabetes. Keduanya bisa dicegah sejak muda lewat gaya hidup sehat.</p>
+      <span class="sumber-kartu">Sumber: Survei Kesehatan Indonesia 2023, Kemenkes RI</span>
+    </div>
   </div>
 </section>
 
+<!-- ================= FAKTA SINGKAT (kotak hijau isi 4 angka) ================= -->
 <section class="wrap">
   <div class="fakta">
     <div><b>8 🥛</b><span>gelas air putih per hari</span></div>
+    <!-- <b> = angka gede warna kuning, <span> = keterangan kecil di bawahnya -->
     <div><b>150′</b><span>menit aktivitas per minggu (WHO)</span></div>
     <div><b>7–9 j</b><span>tidur ideal orang dewasa</span></div>
     <div><b>½</b><span>piring berisi buah dan sayur</span></div>
@@ -110,10 +146,13 @@
   <p class="sumber">Sumber: Kemenkes RI &amp; World Health Organization (WHO).</p>
 </section>
 
+<!-- ================= DAFTAR SUMBER GAMBAR ================= -->
 <section class="wrap sumber-gambar">
   <h2>Sumber Gambar</h2>
   <p>Gambar-gambar pada website ini bersumber dari:</p>
   <ol>
+    <!-- ol = daftar bernomor (1, 2, 3...), li = satu item di dalam daftar -->
+    <!-- target="_blank" = link kebuka di tab baru. rel="noopener" = pengaman standar buat link tab baru -->
     <li><a href="https://rri.co.id/bandar-lampung/kesehatan/1798559/manfaat-lari-pagi-bagi-kesehatan-tubuh-manusia" target="_blank" rel="noopener">RRI: Manfaat Lari Pagi bagi Kesehatan Tubuh Manusia</a></li>
     <li><a href="https://studyinca.ac.id/pencegahan-penyakit/" target="_blank" rel="noopener">Studyinca: Pencegahan Penyakit</a></li>
     <li><a href="https://www.halodoc.com/kesehatan/kesehatan-mental" target="_blank" rel="noopener">Halodoc: Kesehatan Mental</a></li>
@@ -123,6 +162,8 @@
   </ol>
 </section>
 
+<!-- ================= FOOTER (paling bawah) ================= -->
 <footer>© 2026 <b>Livora | SDG 3 | Alvin-Ratih-Yusa-Surya</b> · Dibuat untuk edukasi hidup sehat</footer>
+<!-- nama tim yang bikin websitenya -->
 </body>
 </html>
