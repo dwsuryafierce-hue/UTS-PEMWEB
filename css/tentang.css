@@ -66,6 +66,8 @@ img{max-width:100%;height:auto}  /* pengaman: gambar tidak boleh lebih lebar dar
 /* daftar referensi */
 .referensi{margin:0;padding-left:22px;color:var(--abu)}
 .referensi li{padding:4px 0}
+.referensi a{color:var(--hijau);font-weight:500;text-decoration:none;word-break:break-word}
+.referensi a:hover{text-decoration:underline;color:var(--hijau-muda)}
 
 /* ---------- FOOTER ---------- */
 footer{background:var(--hijau);color:#e8f7ec;text-align:center;padding:22px;font-size:13px;margin-top:40px}
