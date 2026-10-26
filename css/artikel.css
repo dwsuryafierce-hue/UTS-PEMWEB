@@ -113,14 +113,7 @@ body {
   display: none;
 }
 
-/* ---------- HERO EDUKASI (Background konsultasi.jpg + Overlay Hijau) ---------- */
-.hero-edukasi {
-  background: 
-    linear-gradient(135deg, rgba(20, 85, 40, 0.75) 0%, rgba(31, 122, 61, 0.82) 100%),
-    url("../image/konsultasi.jpg") center/cover no-repeat;
-  padding: 60px 0;
-  border-bottom: 4px solid var(--hijau);
-}
+
 
 .hero-edukasi-teks {
   background: rgba(255, 255, 255, 0.95);
