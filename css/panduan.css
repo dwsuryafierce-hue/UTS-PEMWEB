@@ -187,36 +187,24 @@ input:focus-visible,
 
 /* ===== Isi Piringku ===== */
 .piring {
-  width: 214px;
-  height: 214px;
+ .piring {
+  width: 220px;
+  height: 220px;
   margin: 0 auto 24px;
   border-radius: 50%;
   border: 6px solid var(--kuning);
   overflow: hidden;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-}
-.piring span {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: .85rem;
-  font-weight: 700;
-  color: #1b2a20;
-}
-.buah  { background: #e6a23c; }
-.sayur { background: #3cb371; }
-.pokok { background: #f5c82e; }
-.lauk  { background: #8fd47e; }
-
-.keterangan {
-  text-align: center;
-  font-size: 1.15rem;
-  font-weight: 500;
-  color: var(--teks-redup);
+  background: #fff;
 }
 
+.piring img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 /* ===== Kartu bawah ===== */
 .ikon-box {
   display: flex;
