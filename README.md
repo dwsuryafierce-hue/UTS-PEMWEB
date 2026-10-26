@@ -35,12 +35,8 @@ Website ini terdiri dari 5 halaman utama yang saling terhubung secara konsisten
 * **CSS3**: Menggunakan stylesheet eksternal terpisah untuk setiap halaman dengan penerapan variabel warna (`:root`).
 * **Layout & Responsivitas**: Menggunakan **Flexbox** dan **CSS Grid** untuk penyusunan tata letak kartu dan struktur halaman yang fleksibel
 * **Media Queries**: Mengatur penyesuaian tampilan agar optimal pada perangkat Desktop, Tablet, dan Smartphone
-//
+
 
 ---
 
 
-  z-index: 50;
-  background: var(--putih);
-  border-bottom: 3px solid var(--kuning);
-}
