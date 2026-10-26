@@ -1,4 +1,4 @@
-/* ===== artikel.css (Lengkap & Teruji) ===== */
+/* ===== artikel.css (Layout Melebar / Horizontal Rows) ===== */
 
 :root {
   --hijau: #1f7a3d;
@@ -31,7 +31,7 @@ body {
 }
 
 .wrap {
-  max-width: 1040px;
+  max-width: 1000px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -55,6 +55,12 @@ body {
 
 .seksi h2 {
   color: var(--hijau-tua);
+  margin-bottom: 8px;
+}
+
+.deskripsi-seksi {
+  margin-bottom: 28px;
+  color: var(--abu);
 }
 
 /* ---------- NAVBAR ---------- */
@@ -113,7 +119,7 @@ body {
   display: none;
 }
 
-/* ---------- HERO EDUKASI (Background konsultasi.jpg + Overlay Hijau) ---------- */
+/* ---------- HERO EDUKASI ---------- */
 .hero-edukasi {
   background: 
     linear-gradient(135deg, rgba(20, 85, 40, 0.75) 0%, rgba(31, 122, 61, 0.82) 100%),
@@ -144,69 +150,85 @@ body {
   color: var(--abu);
 }
 
-/* ---------- GRID KARTU ---------- */
-.edukasi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  margin-top: 24px;
-}
-
-.kartu-edukasi {
-  background: var(--putih);
-  border: 1px solid #c2e2ca;
-  border-radius: 18px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(31, 122, 61, 0.08);
-  transition: transform .2s ease, box-shadow .2s ease;
+/* ---------- TATA LETAK ARTIKEL MELEBAR (HORIZONTAL ROWS) ---------- */
+.artikel-list-horizontal {
   display: flex;
   flex-direction: column;
+  gap: 24px;
 }
 
-.kartu-edukasi:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 24px rgba(31, 122, 61, 0.16);
+.kartu-horizontal {
+  background: var(--putih);
+  border: 1px solid #c2e2ca;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(31, 122, 61, 0.07);
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  align-items: center;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.kartu-horizontal:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(31, 122, 61, 0.14);
   border-color: var(--hijau-muda);
 }
 
-.kartu-edukasi h3 {
-  color: var(--hijau-tua);
-  margin: 14px 0 8px;
-  font-size: 18px;
+/* Efek Zig-Zag: Gambar di kanan, teks di kiri */
+.kartu-horizontal.dibalik {
+  grid-template-columns: 1fr 280px;
 }
 
-.kartu-edukasi p {
-  color: var(--abu);
-  font-size: 14px;
-  margin-bottom: 8px;
+.kartu-horizontal.dibalik .gambar-samping {
+  order: 2;
 }
 
-.ph-edukasi {
-  height: 180px;
-  border-radius: 14px;
+.kartu-horizontal.dibalik .teks-samping {
+  order: 1;
+}
+
+.gambar-samping {
+  height: 100%;
+  min-height: 200px;
   background: var(--hijau-pucat);
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
 }
 
-.ph-edukasi.foto img {
+.gambar-samping img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-/* Styling tautan sumber gambar meditasi */
+.teks-samping {
+  padding: 24px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.teks-samping h3 {
+  color: var(--hijau-tua);
+  margin-bottom: 8px;
+  font-size: 19px;
+}
+
+.teks-samping p {
+  color: var(--abu);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+/* Tautan Sumber */
 .sumber-link {
   display: inline-block;
-  margin-top: auto;
-  font-size: 12px;
+  font-size: 11.5px;
   color: var(--hijau);
   text-decoration: underline;
   font-weight: 500;
+  width: max-content;
   transition: color 0.2s ease;
 }
 
@@ -250,13 +272,7 @@ footer b {
 }
 
 /* ---------- RESPONSIF HP & TABLET ---------- */
-@media (max-width: 992px) {
-  .edukasi-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   .burger {
     display: block;
     font-size: 26px;
@@ -281,7 +297,21 @@ footer b {
     display: flex;
   }
 
-  .edukasi-grid {
+  /* Ubah kartu horizontal menjadi susunan vertikal di layar HP */
+  .kartu-horizontal,
+  .kartu-horizontal.dibalik {
     grid-template-columns: 1fr;
+  }
+
+  .kartu-horizontal.dibalik .gambar-samping {
+    order: unset;
+  }
+
+  .kartu-horizontal.dibalik .teks-samping {
+    order: unset;
+  }
+
+  .gambar-samping {
+    height: 180px;
   }
 }
