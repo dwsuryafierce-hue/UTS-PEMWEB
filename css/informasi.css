@@ -1,0 +1,335 @@
+/* ===== informasi.css (CSS halaman Informasi) ===== */
+
+/* ---------- WARNA & DASAR ---------- */
+:root {
+  --hijau: #1f7a3d;
+  --hijau-muda: #2e9e57;
+  --hijau-pucat: #e6f6ea;
+  --kuning: #f6c928;
+  --kuning-pucat: #fff6cf;
+  --putih: #ffffff;
+  --teks: #1d2b22;
+  --abu: #5a6b60;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', system-ui, sans-serif;
+  color: var(--teks);
+  background: #fbfdf8;
+  line-height: 1.65;
+}
+
+.wrap {
+  max-width: 1040px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.tag {
+  display: inline-block;
+  background: var(--kuning);
+  color: #3a2f00;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 99px;
+}
+
+.seksi {
+  padding-top: 36px;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--putih);
+  border-bottom: 3px solid var(--kuning);
+}
+
+.navbar .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.logo {
+  font-weight: 700;
+  color: var(--hijau);
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  position: relative;
+  display: block;
+  padding: 8px 16px;
+  color: var(--teks);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 99px;
+  transition: background .25s, color .25s;
+}
+
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 3px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--kuning);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s ease;
+}
+
+.nav-menu a:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-menu a:hover {
+  background: var(--hijau-pucat);
+  color: var(--hijau);
+}
+
+.nav-menu a.active {
+  background: var(--hijau);
+  color: #fff;
+}
+
+.nav-menu a.active::after {
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.burger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: var(--hijau);
+}
+
+/* ---------- HERO INFORMASI ---------- */
+.hero-edukasi {
+  background: url("../image/lataredukasi.png") center/cover no-repeat;
+  padding: 56px 0;
+  border-bottom: 1px solid #dcebdc;
+}
+
+.hero-edukasi-teks {
+  background: rgba(250, 249, 242, 0.92);
+  padding: 28px;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 24px rgba(31, 122, 61, 0.15);
+  max-width: 700px;
+}
+
+.hero-edukasi h1 {
+  font-size: clamp(24px, 4vw, 36px);
+  line-height: 1.25;
+  margin: 12px 0 8px;
+  color: var(--hijau);
+}
+
+.hero-edukasi p {
+  margin: 0;
+  color: var(--abu);
+}
+
+/* ---------- GRID KARTU INFORMASI ---------- */
+.edukasi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.kartu-edukasi {
+  background: var(--putih);
+  border: 1px solid #dcebdc;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(31, 122, 61, 0.06);
+  transition: transform .2s ease, box-shadow .2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.kartu-edukasi:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(31, 122, 61, 0.12);
+}
+
+.kartu-edukasi h3 {
+  color: var(--hijau);
+  margin: 14px 0 8px;
+  font-size: 18px;
+}
+
+.kartu-edukasi p {
+  color: var(--abu);
+  font-size: 14px;
+  margin: 0;
+}
+
+.ph-edukasi {
+  height: 180px;
+  border-radius: 14px;
+  background: var(--hijau-pucat);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.ph-edukasi.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------- KOTAK CATATAN / INFO ---------- */
+.catatan-info {
+  background: var(--kuning-pucat);
+  border: 1px solid var(--kuning);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(246, 201, 40, 0.15);
+}
+
+.catatan-info h3 {
+  color: var(--hijau);
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.catatan-info p {
+  margin: 0;
+  color: var(--teks);
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: var(--hijau);
+  color: #e8f7ec;
+  text-align: center;
+  padding: 22px;
+  font-size: 13px;
+  margin-top: 40px;
+}
+
+footer b {
+  color: var(--kuning);
+}
+
+/* =========================================================
+   RESPONSIF (TABLET & IPAD: max-width 992px)
+   ========================================================= */
+@media (max-width: 992px) {
+  .wrap {
+    padding: 0 24px;
+  }
+
+  .hero-edukasi {
+    padding: 44px 0;
+  }
+
+  .hero-edukasi-teks {
+    max-width: 100%;
+  }
+
+  .edukasi-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+/* =========================================================
+   RESPONSIF (SMARTPHONE / HP: max-width 760px)
+   ========================================================= */
+@media (max-width: 760px) {
+  .wrap {
+    padding: 0 16px;
+  }
+
+  /* Navigation Mobile Toggle */
+  .burger {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--putih);
+    flex-direction: column;
+    padding: 10px 20px;
+    border-bottom: 3px solid var(--kuning);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  #menu-toggle:checked ~ .nav-menu {
+    display: flex;
+  }
+
+  /* Hero & Content adjustments */
+  .hero-edukasi {
+    padding: 30px 0;
+  }
+
+  .hero-edukasi-teks {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .seksi {
+    padding-top: 28px;
+  }
+
+  /* Grid Kartu pada HP (Menjadi 1 Kolom Full Width) */
+  .edukasi-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .ph-edukasi {
+    height: 190px;
+  }
+
+  .catatan-info {
+    padding: 18px;
+  }
+}
